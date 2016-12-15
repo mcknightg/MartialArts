@@ -1,0 +1,31 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse" >
+        <ul class="sidebar-nav">
+            <li class="nav-header">
+
+                <div ng-include="'components/profile/profile.html'"></div>
+
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="index.dashboard"><i class="fa fa-home"></i> <span class="nav-label">Main page</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="admin.settings"><i class="fa fa-cog"></i> <span class="nav-label">Settings</span></a>
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="admin.users"><i class="fa fa-users"></i> <span class="nav-label">Users</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="admin.subscriptions"><i class="fa fa-line-chart"></i> <span class="nav-label">Subscriptions</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="admin.docs"><i class="fa fa-file-o"></i> <span class="nav-label">Docs</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="model"><i class="fa fa-sitemap"></i> <span class="nav-label">Model</span></a>
+            </li>
+        </ul>
+
+    </div>
+</nav>

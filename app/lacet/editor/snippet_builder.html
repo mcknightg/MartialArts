@@ -1,0 +1,137 @@
+<div id="snippetEditor" class="tabbable skin-setttings">
+<form id='snippetForm' class="form">
+    <ul  class="nav nav-tabs" role="tablist">
+        <li>
+            <a class="active" data-target="#details" data-toggle="tab">Details</a>
+        </li>
+        <li>
+            <a class="" data-target="#jsonSchemaTab" data-toggle="tab">Json Schema</a>
+        </li>
+        <li>
+            <a class="" data-target="#htmlTab" data-toggle="tab">HTML</a>
+        </li>
+        <li>
+            <a class="" data-target="#cssTab" data-toggle="tab">CSS</a>
+        </li>
+
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active sortable" id="details" role="tabpanel">
+            <div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="control-label" >Icon</label>
+                        <div class="input-group">
+                            <input class="form-control input-sm" name="icon" type="text">
+                        <span class="input-group-btn">
+                            <button class="btn btn-success btn-sm" data-iconset="fontawesome" role="iconpicker"></button>
+                        </span>
+                        </div>
+
+                        <!-- Text Input-->
+                        <div class="form-group">
+                            <label class="control-label" >Category</label>
+                            <select class="form-control" name="categories" id="categories">
+                                <option value="Buttons|Icons">Buttons|Icons</option>
+                            </select>
+                            <input class="form-control input-sm" name="category" placeholder="New Category Name" type="text">
+                        </div>
+                        <!-- Text Input-->
+                        <div class="form-group hidden">
+                            <label class="control-label" >id</label>
+                            <input class="form-control input-sm" name="_id" readonly="readonly" type="text">
+                        </div>
+
+                    </div>
+                    <div class="col-sm-4">
+                        <!-- Text Input-->
+                        <div class="form-group">
+                            <label class="control-label">Name</label>
+                            <input class="form-control input-sm" name="name" placeholder="Image" type="text">
+                        </div>
+                        <!-- Text Input-->
+                        <div class="form-group">
+                            <label class="control-label" >Kind</label>
+                            <input class="form-control input-sm" name="kind" placeholder="yourname.image" type="text">
+                        </div>
+                        <!-- Text Input-->
+                        <div class="form-group">
+                            <label class="control-label" >Tags</label>
+                            <input class="form-control input-sm" name="tags" placeholder="angular image" type="text">
+                        </div>
+                        <!-- Button (Double) -->
+                        <div class="control-group">
+                            <label class="control-label" ></label>
+                            <div class="controls">
+
+                                <button type='button' class=" btn btn-success btn-md " id="saveSnippet">
+                                    <i class="buttonlabel fa fa-cube">
+                                        Save</i>
+                                </button>
+                                <button type='button' class=" btn btn-primary btn-md " id="renderSnippet">
+                                    <i class="buttonlabel fa fa-dashboard">
+                                        Render</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <label class="control-label" >Rendered Snippet</label>
+                        <div id="renderedSnippet">
+                            <div style='height:145px;background-color: rgba(127, 163, 193, 0.35)'>
+                                <h1>Snippet Not Rendered</h1>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <!-- Select -->
+                        <div class="control-group">
+                            <label class="control-label" >Load Example</label>
+                            <div class="controls">
+                                <select class="form-control input-sm " name="example">
+                                    <option value="none">None</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <!-- Button (Single) -->
+                        <div class="control-group">
+                            <label class="control-label" for="copyexample"></label>
+                            <div class="controls">
+                                <button type='button' class=" btn btn-warning btn-md " id="copyexample">
+                                    <i class="buttonlabel fa fa-edit">
+                                        Copy Example</i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane sortable" id="jsonSchemaTab" role="tabpanel">
+            <div style="min-height:400px;"   id="schema" name="schema"></div>
+        </div>
+
+        <div class="tab-pane sortable" id="htmlTab" role="tabpanel">
+            <div style="min-height:400px;"    id="template" name="template"></div>
+        </div>
+
+        <div class="tab-pane sortable" id="cssTab" role="tabpanel">
+            <div style="min-height:400px;"  id="css" name="css"></div>
+        </div>
+
+    </div>
+
+</form>
+</div>

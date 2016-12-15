@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default navbar-fixed-top {{classes}}" role="navigation">
+    <div class="navbar-header">
+        <button class="navbar-toggle" data-target="#navbar" data-toggle="collapse" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ui-sref="home" translate="global.title">BluntSoftware</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input  class="form-control" type="text"/>
+            </div>
+            <button class="btn btn-default" type="submit">
+                Search
+            </button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li ng-show="isAdmin()">
+                <a ui-sref="admin.docs.intro">{{account.firstName}}</a>
+            </li>
+            <li ng-show="isSuperUser()">
+                <a ui-sref="superuser">Account Admin</a>
+            </li>
+            <li>
+                <a ui-sref="index.settings"><span class="fa fa-wrench"></span>
+                    &nbsp;Profile Settings</a>
+            </li>
+            <li>
+                <a ui-sref="index.password"><span class="fa fa-gear"></span>
+                    &nbsp;Change Password</a>
+            </li>
+
+            <li class="logout">
+                <a ui-sref="logout">
+                    <i class="fa fa-sign-out"></i> Log out
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

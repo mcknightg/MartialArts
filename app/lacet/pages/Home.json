@@ -1,0 +1,1212 @@
+{
+  "name": "Home",
+  "klass": "SnippetContainer",
+  "category": "misc",
+  "icon": "fa fa-edit",
+  "template": "<div></div>",
+  "properties": {
+    "padding_left": "25px",
+    "padding_right": "25px",
+    "classes": ""
+  },
+  "height": 100,
+  "snippets": [
+    {
+      "name": "Nav Bar",
+      "kind": "bootstrap.nav",
+      "klass": "SnippetNavBar",
+      "category": "Media",
+      "icon": "fa fa-edit",
+      "template": "\n\n",
+      "properties": {
+        "Brand": "Blunt Software",
+        "Image": "https://www.wildappledesigngroup.com/themes/cherry_responsive_boilerplate/img/stamp-branding.png",
+        "img_height": 100,
+        "img_width": 125,
+        "link": "http://bluntsoftware.com",
+        "Inverse": false,
+        "location": "navbar-fixed-top"
+      },
+      "height": 100,
+      "snippets": [
+        {
+          "name": "Nav Bar Item",
+          "kind": "bootstrap.navItem",
+          "klass": "SnippetNavBarItem",
+          "category": "Media",
+          "icon": "fa fa-edit",
+          "template": "\n\n",
+          "properties": {
+            "label": "Home",
+            "link": "#/lacet/Home",
+            "type": "link",
+            "icon": "fa-bank",
+            "location": "navbar-left"
+          },
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        },
+        {
+          "name": "Nav Bar Item",
+          "kind": "bootstrap.navItem",
+          "klass": "SnippetNavBarItem",
+          "category": "Media",
+          "icon": "fa fa-edit",
+          "template": "\n\n",
+          "properties": {
+            "label": "Dashboard",
+            "link": "#/index/dashboard",
+            "type": "link",
+            "icon": "fa-bars",
+            "location": "navbar-right"
+          },
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        },
+        {
+          "name": "Nav Bar Item",
+          "kind": "bootstrap.navItem",
+          "klass": "SnippetNavBarItem",
+          "category": "Media",
+          "icon": "fa fa-edit",
+          "template": "\n\n",
+          "properties": {
+            "label": "Editor",
+            "link": "#/laceteditor",
+            "type": "link",
+            "icon": "fa-arrows-v",
+            "location": "navbar-right"
+          },
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        },
+        {
+          "name": "Nav Bar Item",
+          "kind": "bootstrap.navItem",
+          "klass": "SnippetNavBarItem",
+          "category": "Media",
+          "icon": "fa fa-edit",
+          "template": "\n\n",
+          "properties": {
+            "label": "Log Out",
+            "link": "#/logout",
+            "type": "link",
+            "icon": "fa-ban",
+            "location": "navbar-right"
+          },
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        },
+        {
+          "name": "Nav Bar Item",
+          "kind": "bootstrap.navItem",
+          "klass": "SnippetNavBarItem",
+          "category": "Media",
+          "icon": "fa fa-edit",
+          "template": "\n\n",
+          "properties": {
+            "label": "Contacts",
+            "link": "#/lacet/Contacts",
+            "type": "dropdown",
+            "icon": "fa-users",
+            "location": "navbar-left"
+          },
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        }
+      ],
+      "type": "SnippetNavBar",
+      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+    },
+    {
+      "name": "Carousel",
+      "kind": "bootstrap.carousel",
+      "klass": "Snippet",
+      "category": "Media",
+      "icon": "fa fa-edit",
+      "template": "\n    <!-- Carousel -->\n    <div id=\"{{id}}\" class=\"carousel slide\" data-ride=\"carousel\">\n        <ol class=\"carousel-indicators\">\n            {{#each carouselList}}\n                <li data-target=\"#{{@root.id}}\" data-slide-to=\"{{@index}}\" class=\"test {{#if @first}}active{{/if}}\" ></li>\n            {{/each}}\n        </ol>\n        <div class=\"carousel-inner\" role=\"listbox\" >\n            {{#each carouselList}}\n                <div class=\"item {{#if @first}}active{{/if}}\">\n                    {{#if  @root.scale }} <div class=\"container\">  {{/if}}\n                        <div class=\"carousel-caption\">\n                            <h4>{{{header}}}</h4>\n                            <p> {{{text}}}</p>\n                        </div>\n                {{#if @root.scale}} </div>  {{/if}}\n                {{#if @root.scale}} <div class=\"header-back\">  {{/if}}\n                        <img alt=\"Carousel Bootstrap First\" src=\"{{image}}\"/>\n                {{#if @root.scale}}  </div>   {{/if}}\n                </div>\n            {{/each}}\n        </div>\n        <a class=\"left carousel-control\" data-target=\"#{{id}}\" role=\"button\" data-slide=\"prev\">\n            <span class=\"glyphicon glyphicon-chevron-left\"  aria-hidden=\"true\"></span>\n            <span class=\"sr-only\">Previous</span>\n        </a>\n        <a  class=\"right carousel-control\" data-target=\"#{{id}}\" role=\"button\" data-slide=\"next\">\n            <span class=\"glyphicon glyphicon-chevron-right\"  aria-hidden=\"true\"></span>\n            <span class=\"sr-only\">Next</span>\n        </a>\n    </div>\n",
+      "properties": {
+        "scale": false,
+        "carouselList": [
+          {
+            "image": "http://www.hertz-kompressoren.com/portals/0/1920x200%20banner%20sf6.jpg",
+            "responsive": "img-responsive",
+            "imgtype": "",
+            "header": "",
+            "text": "",
+            "icon": "fa-edit"
+          }
+        ],
+        "classes": ""
+      },
+      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+    },
+    {
+      "name": "3 Column Row",
+      "klass": "SnippetRow3Col",
+      "category": "Columns",
+      "icon": "fa fa-edit",
+      "template": "\n\n",
+      "properties": {
+        "padding_left": "25px",
+        "padding_right": "25px",
+        "classes": ""
+      },
+      "height": 100,
+      "snippets": [
+        {
+          "klass": "SnippetCol",
+          "category": "misc",
+          "icon": "fa fa-edit",
+          "template": "<div></div>",
+          "properties": {
+            "padding_left": "25px",
+            "padding_right": "25px",
+            "classes": ""
+          },
+          "height": 100,
+          "snippets": [],
+          "type": "SnippetCol",
+          "value": {},
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        },
+        {
+          "klass": "SnippetCol",
+          "category": "misc",
+          "icon": "fa fa-edit",
+          "template": "<div></div>",
+          "properties": {
+            "padding_left": "25px",
+            "padding_right": "25px",
+            "classes": ""
+          },
+          "height": 100,
+          "snippets": [
+            {
+              "name": "3 Column Row",
+              "klass": "SnippetRow3Col",
+              "category": "Columns",
+              "icon": "fa fa-edit",
+              "template": "\n\n",
+              "properties": {
+                "padding_left": "25px",
+                "padding_right": "25px",
+                "classes": ""
+              },
+              "height": 100,
+              "snippets": [
+                {
+                  "klass": "SnippetCol",
+                  "category": "misc",
+                  "icon": "fa fa-edit",
+                  "template": "<div></div>",
+                  "properties": {
+                    "header": "Sign Up",
+                    "text": "Panel Text",
+                    "footer": "",
+                    "panelColor": "panel-primary"
+                  },
+                  "height": 100,
+                  "snippets": [
+                    {
+                      "name": "Header Text",
+                      "kind": "blunt.headertext",
+                      "klass": "Snippet",
+                      "category": "Media",
+                      "icon": "fa fa-edit",
+                      "template": "\n    <!-- Header Text -->\n    <div class=\"editable-header\">{{{header}}}</div>\n    <div class=\"editable-text\">{{{text}}}</div>\n     {{>linkText}}\n",
+                      "properties": {
+                        "header": "<h2 style=\"color: rgb(44, 62, 80);\">Reach Out</h2><h2><p style=\"font-size: 15px;\">Manage leads, contacts, organizations, &nbsp;partners, vendors and suppliers. See everything from background info, recent tasks, event history and opportunities.</p><p style=\"font-size: 15px;\"><a class=\"navy-link\" href=\"http://bluntsoftware.com/ReachOut/#\" role=\"button\">Details »</a></p><br style=\"font-size: 15px;\"></h2><h2 style=\"color: rgb(44, 62, 80);\">Application Integration</h2><h2><p style=\"font-size: 15px;\">Connect and work with many popular applications right from within Reach Out.</p></h2>",
+                        "text": "",
+                        "link": "http://bluntsoftware.com",
+                        "icon": "fa-edit"
+                      },
+                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                    }
+                  ],
+                  "type": "SnippetCol",
+                  "value": {},
+                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                },
+                {
+                  "klass": "SnippetCol",
+                  "category": "misc",
+                  "icon": "fa fa-edit",
+                  "template": "<div></div>",
+                  "properties": {
+                    "padding_left": "25px",
+                    "padding_right": "25px",
+                    "classes": ""
+                  },
+                  "height": 100,
+                  "snippets": [
+                    {
+                      "name": "Header Text",
+                      "kind": "blunt.headertext",
+                      "klass": "Snippet",
+                      "category": "Media",
+                      "icon": "fa fa-edit",
+                      "template": "\n    <!-- Header Text -->\n    <div class=\"editable-header\">{{{header}}}</div>\n    <div class=\"editable-text\">{{{text}}}</div>\n     {{>linkText}}\n",
+                      "properties": {
+                        "header": "<h2 style=\"color: rgb(44, 62, 80);\">Mobile Phones</h2><h1 style=\"color: rgb(44, 62, 80); text-align: center;\"><p style=\"font-size: 15px; text-align: start;\">Our interfaces are fully responsive and designed to work on mobile phones, laptops, tablets and desktops</p><p style=\"font-size: 15px; text-align: start;\"><a class=\"navy-link\" href=\"http://bluntsoftware.com/ReachOut/#\" role=\"button\">Details »</a></p><br style=\"font-size: 15px; text-align: start;\"></h1><h2 style=\"color: rgb(44, 62, 80);\">Advanced Forms</h2><h1 style=\"color: rgb(44, 62, 80); text-align: center;\"><p style=\"font-size: 15px; text-align: start;\">Collect and store important information with easy to use forms</p><p style=\"font-size: 15px; text-align: start;\"><a class=\"navy-link\" href=\"http://bluntsoftware.com/ReachOut/#\" role=\"button\">Details »</a></p></h1>",
+                        "text": "",
+                        "link": "http://bluntsoftware.com",
+                        "icon": "fa-edit"
+                      },
+                      "value": {
+                        "header": "<h2 style=\"color: rgb(44, 62, 80);\"><i>Reach Out</i></h2><h2><p style=\"font-size: 15px;\">Manage leads, contacts, organizations, partners, vendors and suppliers. See everything from background info, recent tasks, event history and opportunities.</p></h2><h2 style=\"color: rgb(44, 62, 80);\"><i>Application Integration</i></h2><h2><p style=\"font-size: 15px;\">Connect and work with many popular applications right from within Reach Out.</p></h2>",
+                        "text": "",
+                        "link": "http://bluntsoftware.com",
+                        "icon": "fa-edit"
+                      },
+                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                    }
+                  ],
+                  "type": "SnippetCol",
+                  "value": {},
+                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                },
+                {
+                  "klass": "SnippetCol",
+                  "category": "misc",
+                  "icon": "fa fa-edit",
+                  "template": "<div></div>",
+                  "properties": {
+                    "padding_left": "25px",
+                    "padding_right": "25px",
+                    "classes": ""
+                  },
+                  "height": 100,
+                  "snippets": [
+                    {
+                      "name": "Horizontal Line",
+                      "kind": "bootstrap.horizontal_line",
+                      "klass": "Snippet",
+                      "category": "Media",
+                      "icon": "fa fa-edit",
+                      "template": "\n    <!-- Horizontal Line -->\n    <div style=\"border-top:1px solid rgb(185, 185, 185);height:1px;padding:10px;width:100%\"></div>\n",
+                      "properties": {},
+                      "value": {},
+                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                    },
+                    {
+                      "name": "Content Panel",
+                      "kind": "bootstrap.panel",
+                      "klass": "SnippetPanel",
+                      "category": "Media",
+                      "icon": "fa fa-edit",
+                      "template": "\n    <!-- Content Panel -->\n",
+                      "properties": {
+                        "header": "Sign Up",
+                        "text": "Panel Text",
+                        "footer": "",
+                        "panelColor": "panel-default"
+                      },
+                      "height": 100,
+                      "snippets": [
+                        {
+                          "name": "Text Input",
+                          "kind": "bootstrap.field",
+                          "klass": "Snippet",
+                          "category": "Forms",
+                          "icon": "fa fa-edit",
+                          "template": "\n    <!-- Text Input-->\n    <div class=\"form-group\">\n        <label class=\"control-label editable-label\" for=\"{{ id }}\">{{ label }}</label>\n        {{> textfield}}\n        {{> helptext}}\n    </div>\n",
+                          "properties": {
+                            "label": "",
+                            "name": "",
+                            "required": "",
+                            "readonly": "",
+                            "inputsize": "input-sm",
+                            "placeholder": "Email Address",
+                            "helptext": "",
+                            "classes": ""
+                          },
+                          "value": {
+                            "label": "",
+                            "name": "",
+                            "required": "",
+                            "readonly": "",
+                            "inputsize": "input-sm",
+                            "placeholder": "Email Address",
+                            "helptext": "",
+                            "classes": ""
+                          },
+                          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                        },
+                        {
+                          "name": "Text Input",
+                          "kind": "bootstrap.field",
+                          "klass": "SnippetField",
+                          "category": "Forms",
+                          "icon": "fa fa-edit",
+                          "template": "\n    <!-- Text Input-->\n    <div class=\"form-group\">\n        <label class=\"control-label editable-label\" for=\"{{ id }}\">{{ label }}</label>\n        {{> textfield}}\n        {{> helptext}}\n    </div>\n",
+                          "properties": {
+                            "field_endpoint": "none",
+                            "label": "",
+                            "name": "id",
+                            "required": "",
+                            "readonly": "",
+                            "inputsize": "input-sm",
+                            "placeholder": "Enter Your Password",
+                            "helptext": "",
+                            "id": "",
+                            "classes": ""
+                          },
+                          "type": "SnippetField"
+                        },
+                        {
+                          "name": "2 Column Row",
+                          "klass": "SnippetRow2Col",
+                          "category": "Columns",
+                          "icon": "fa fa-edit",
+                          "template": "\n\n",
+                          "properties": {
+                            "padding_left": "25px",
+                            "padding_right": "25px",
+                            "classes": ""
+                          },
+                          "height": 100,
+                          "snippets": [
+                            {
+                              "klass": "SnippetCol",
+                              "category": "misc",
+                              "icon": "fa fa-edit",
+                              "template": "<div></div>",
+                              "properties": {
+                                "padding_left": "25px",
+                                "padding_right": "25px",
+                                "classes": ""
+                              },
+                              "height": 100,
+                              "snippets": [
+                                {
+                                  "name": "Single Button",
+                                  "kind": "bootstrap.button",
+                                  "klass": "Snippet",
+                                  "category": "Buttons | Icons",
+                                  "icon": "fa fa-square-o",
+                                  "template": "\n    <!-- Button (Single) -->\n    <div class=\"control-group\">\n        <label class=\"control-label editable-label\" for=\"{{id}}\">{{ label}}</label>\n        <div class=\"controls\">\n            <button  type=\"button\"  {{> idNameField}} class=' btn {{classes}} {{ buttontype}} {{buttonsize}} {{fullwidth}}'><i class=\"editable-label buttonlabel fa {{icon}}\">  {{ buttonlabel}}</i> </button>\n        </div>\n    </div>\n",
+                                  "properties": {
+                                    "label": "",
+                                    "buttontype": "btn-primary",
+                                    "buttonsize": "btn-md",
+                                    "buttonlabel": "  Sign Up",
+                                    "fullwidth": "btn-block",
+                                    "classes": "",
+                                    "icon": "fa-edit",
+                                    "link": "http://bluntsoftware.com"
+                                  },
+                                  "value": {
+                                    "label": "",
+                                    "buttontype": "btn-primary",
+                                    "buttonsize": "btn-md",
+                                    "buttonlabel": "  Sign Up",
+                                    "fullwidth": "btn-block",
+                                    "classes": "",
+                                    "icon": "fa-edit",
+                                    "link": "http://bluntsoftware.com"
+                                  },
+                                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                }
+                              ],
+                              "type": "SnippetCol",
+                              "value": {},
+                              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                            },
+                            {
+                              "klass": "SnippetCol",
+                              "category": "misc",
+                              "icon": "fa fa-edit",
+                              "template": "<div></div>",
+                              "properties": {
+                                "padding_left": "25px",
+                                "padding_right": "25px",
+                                "classes": ""
+                              },
+                              "height": 100,
+                              "snippets": [
+                                {
+                                  "name": "Image",
+                                  "kind": "bootstrap.image",
+                                  "klass": "Snippet",
+                                  "category": "Media",
+                                  "icon": "fa fa-edit",
+                                  "template": "\n    <!-- Image -->\n    <img alt=\"Alt Image\" src=\"{{image}}\" class=\"{{responsive}} {{imgtype}}\" />\n",
+                                  "properties": {
+                                    "image": "http://bluntsoftware.com/ReachOut/img/logo.png",
+                                    "responsive": "img-responsive",
+                                    "imgtype": ""
+                                  },
+                                  "value": {
+                                    "image": "http://bluntsoftware.com/ReachOut/img/logo.png",
+                                    "responsive": "img-responsive",
+                                    "imgtype": ""
+                                  },
+                                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                }
+                              ],
+                              "type": "SnippetCol",
+                              "value": {},
+                              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                            }
+                          ],
+                          "columns": "7 5",
+                          "type": "SnippetRow",
+                          "value": {},
+                          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                        }
+                      ],
+                      "type": "SnippetPanel",
+                      "content": null,
+                      "value": {
+                        "header": "Sign Up",
+                        "text": "Panel Text",
+                        "footer": "",
+                        "panelColor": "panel-primary"
+                      },
+                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                    }
+                  ],
+                  "type": "SnippetCol",
+                  "value": {},
+                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                }
+              ],
+              "columns": "4 4 4",
+              "type": "SnippetRow",
+              "value": {},
+              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+            }
+          ],
+          "type": "SnippetCol",
+          "value": {},
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        },
+        {
+          "klass": "SnippetCol",
+          "category": "misc",
+          "icon": "fa fa-edit",
+          "template": "<div></div>",
+          "properties": {
+            "padding_left": "25px",
+            "padding_right": "25px",
+            "classes": ""
+          },
+          "height": 100,
+          "snippets": [],
+          "type": "SnippetCol",
+          "value": {},
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        }
+      ],
+      "columns": "1 10 1",
+      "type": "SnippetRow",
+      "value": {},
+      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+    },
+    {
+      "name": "3 Column Row",
+      "klass": "SnippetRow3Col",
+      "category": "Columns",
+      "icon": "fa fa-edit",
+      "template": "\n\n",
+      "properties": {
+        "padding_left": "25px",
+        "padding_right": "25px",
+        "classes": ""
+      },
+      "height": 100,
+      "snippets": [
+        {
+          "klass": "SnippetCol",
+          "category": "misc",
+          "icon": "fa fa-edit",
+          "template": "<div></div>",
+          "properties": {
+            "padding_left": "25px",
+            "padding_right": "25px",
+            "classes": ""
+          },
+          "height": 100,
+          "snippets": [],
+          "type": "SnippetCol",
+          "value": {},
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        },
+        {
+          "klass": "SnippetCol",
+          "category": "misc",
+          "icon": "fa fa-edit",
+          "template": "<div></div>",
+          "properties": {
+            "padding_left": "25px",
+            "padding_right": "25px",
+            "classes": ""
+          },
+          "height": 100,
+          "snippets": [
+            {
+              "name": "Header Text",
+              "kind": "blunt.headertext",
+              "klass": "Snippet",
+              "category": "Media",
+              "icon": "fa fa-edit",
+              "template": "\n    <!-- Header Text -->\n    <div class=\"editable-header\">{{{header}}}</div>\n    <div class=\"editable-text\">{{{text}}}</div>\n     {{>linkText}}\n",
+              "properties": {
+                "header": "<h1 style=\"text-align: center;\">Get a complete contact view.<br><span class=\"navy\">Info, Tasks, History and Opportunities</span></h1><h2 style=\"text-align: center;\"><p style=\"font-size: 15px;\">The contact page gives you an overview of everything you need to know about that contacts Info, Tasks, History and Opportunities.</p></h2>",
+                "text": "",
+                "link": "http://bluntsoftware.com",
+                "icon": "fa-edit"
+              },
+              "value": {
+                "header": "<h1 style=\"color: rgb(44, 62, 80); text-align: center;\">Get a complete contact view.<br><span class=\"navy\">Info, Tasks, History and Opportunities</span></h1><h2 style=\"text-align: center;\"><p style=\"font-size: 15px;\">The contact page gives you an overview of everything you need to know about that contacts Info, Tasks, History and Opportunities.</p></h2>",
+                "text": "",
+                "link": "http://bluntsoftware.com",
+                "icon": "fa-edit"
+              },
+              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+            },
+            {
+              "name": "3 Column Row",
+              "klass": "SnippetRow3Col",
+              "category": "Columns",
+              "icon": "fa fa-edit",
+              "template": "\n\n",
+              "properties": {
+                "padding_left": "25px",
+                "padding_right": "25px",
+                "classes": ""
+              },
+              "height": 100,
+              "snippets": [
+                {
+                  "klass": "SnippetCol",
+                  "category": "misc",
+                  "icon": "fa fa-edit",
+                  "template": "<div></div>",
+                  "properties": {
+                    "padding_left": "25px",
+                    "padding_right": "25px",
+                    "classes": ""
+                  },
+                  "height": 100,
+                  "snippets": [
+                    {
+                      "name": "Header Text",
+                      "kind": "blunt.headertext",
+                      "klass": "Snippet",
+                      "category": "Media",
+                      "icon": "fa fa-edit",
+                      "template": "\n    <!-- Header Text -->\n    <div class=\"editable-header\">{{{header}}}</div>\n    <div class=\"editable-text\">{{{text}}}</div>\n     {{>linkText}}\n",
+                      "properties": {
+                        "header": "<h2 style=\"box-sizing: border-box; font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 1.1; color: inherit; margin-top: 21px; margin-bottom: 10.5px; font-size: 32px;\"><i>Track all history</i></h2><h2 style=\"box-sizing: border-box; font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 1.1; color: inherit; margin-top: 21px; margin-bottom: 10.5px; font-size: 32px;\"><div style=\"font-size: 15px; text-align: center;\"><p>We track notes, tasks, emails, files, calls and much more.</p></div><div class=\"m-t-lg\" style=\"font-size: 15px; text-align: center;\"><span class=\"fa fa-bar-chart features-icon\"></span></div></h2><h2><i>Attach documents</i></h2><h2><div class=\"m-t-lg\" style=\"font-size: 15px; text-align: center;\"><p>Attach documents, agreements, proposals and other files</p></div></h2>",
+                        "text": "",
+                        "link": "http://bluntsoftware.com",
+                        "icon": "fa-edit"
+                      },
+                      "value": {
+                        "header": "<h2 style=\"box-sizing: border-box; font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 1.1; color: inherit; margin-top: 21px; margin-bottom: 10.5px; font-size: 32px;\"><i>Track all history</i></h2><h2 style=\"box-sizing: border-box; font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 1.1; color: inherit; margin-top: 21px; margin-bottom: 10.5px; font-size: 32px;\"><div style=\"font-size: 15px; text-align: center;\"><p>We track notes, tasks, emails, files, calls and much more.</p></div><div class=\"m-t-lg\" style=\"font-size: 15px; text-align: center;\"><span class=\"fa fa-bar-chart features-icon\"></span></div></h2><h2><i>Attach documents</i></h2><h2><div class=\"m-t-lg\" style=\"font-size: 15px; text-align: center;\"><p>Attach documents, agreements, proposals and other files</p></div></h2>",
+                        "text": "",
+                        "link": "http://bluntsoftware.com",
+                        "icon": "fa-edit"
+                      },
+                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                    }
+                  ],
+                  "type": "SnippetCol",
+                  "value": {},
+                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                },
+                {
+                  "klass": "SnippetCol",
+                  "category": "misc",
+                  "icon": "fa fa-edit",
+                  "template": "<div></div>",
+                  "properties": {
+                    "padding_left": "25px",
+                    "padding_right": "25px",
+                    "classes": ""
+                  },
+                  "height": 100,
+                  "snippets": [
+                    {
+                      "name": "Image",
+                      "kind": "bootstrap.image",
+                      "klass": "Snippet",
+                      "category": "Media",
+                      "icon": "fa fa-edit",
+                      "template": "\n    <!-- Image -->\n    <img alt=\"Alt Image\" src=\"{{image}}\" class=\"{{responsive}} {{imgtype}}\" />\n",
+                      "properties": {
+                        "image": "http://bluntsoftware.com/ReachOut/img/perspective.png",
+                        "responsive": "img-responsive",
+                        "imgtype": ""
+                      },
+                      "value": {
+                        "image": "http://bluntsoftware.com/ReachOut/img/perspective.png",
+                        "responsive": "img-responsive",
+                        "imgtype": ""
+                      },
+                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                    }
+                  ],
+                  "type": "SnippetCol",
+                  "value": {},
+                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                },
+                {
+                  "klass": "SnippetCol",
+                  "category": "misc",
+                  "icon": "fa fa-edit",
+                  "template": "<div></div>",
+                  "properties": {
+                    "padding_left": "25px",
+                    "padding_right": "25px",
+                    "classes": ""
+                  },
+                  "height": 100,
+                  "snippets": [
+                    {
+                      "name": "Header Text",
+                      "kind": "blunt.headertext",
+                      "klass": "Snippet",
+                      "category": "Media",
+                      "icon": "fa fa-edit",
+                      "template": "\n    <!-- Header Text -->\n    <div class=\"editable-header\">{{{header}}}</div>\n    <div class=\"editable-text\">{{{text}}}</div>\n     {{>linkText}}\n",
+                      "properties": {
+                        "header": "<h2 style=\"box-sizing: border-box; font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 1.1; color: inherit; margin-top: 21px; margin-bottom: 10.5px; font-size: 32px;\"><i>Manage tasks</i></h2><h2><div style=\"font-size: 15px; text-align: center;\"><p>Add and complete tasks that need to be done for each contact.</p></div><div class=\"m-t-lg\" style=\"font-size: 15px; text-align: center;\"><span class=\"fa fa-google features-icon\"></span></div></h2><h2><i>Share with co-workers</i></h2><h2><div class=\"m-t-lg\" style=\"font-size: 15px; text-align: center;\"><p>Share contacts with co-workers ensuring you all have a single up-to-date view of them.</p></div></h2>",
+                        "text": "",
+                        "link": "http://bluntsoftware.com",
+                        "icon": "fa-edit"
+                      },
+                      "value": {
+                        "header": "<h2 style=\"box-sizing: border-box; font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-weight: 400; line-height: 1.1; color: inherit; margin-top: 21px; margin-bottom: 10.5px; font-size: 32px;\"><i>Manage tasks</i></h2><h2><div style=\"font-size: 15px; text-align: center;\"><p>Add and complete tasks that need to be done for each contact.</p></div><div class=\"m-t-lg\" style=\"font-size: 15px; text-align: center;\"><span class=\"fa fa-google features-icon\"></span></div></h2><h2><i>Share with co-workers</i></h2><h2><div class=\"m-t-lg\" style=\"font-size: 15px; text-align: center;\"><p>Share contacts with co-workers ensuring you all have a single up-to-date view of them.</p></div></h2>",
+                        "text": "",
+                        "link": "http://bluntsoftware.com",
+                        "icon": "fa-edit"
+                      },
+                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                    }
+                  ],
+                  "type": "SnippetCol",
+                  "value": {},
+                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                }
+              ],
+              "columns": "3 6 3",
+              "type": "SnippetRow",
+              "value": {},
+              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+            }
+          ],
+          "type": "SnippetCol",
+          "value": {},
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        },
+        {
+          "klass": "SnippetCol",
+          "category": "misc",
+          "icon": "fa fa-edit",
+          "template": "<div></div>",
+          "properties": {
+            "padding_left": "25px",
+            "padding_right": "25px",
+            "classes": ""
+          },
+          "height": 100,
+          "snippets": [],
+          "type": "SnippetCol",
+          "value": {},
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        }
+      ],
+      "columns": "1 10 1",
+      "type": "SnippetRow",
+      "value": {},
+      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+    },
+    {
+      "name": "3 Column Row",
+      "klass": "SnippetRow3Col",
+      "category": "Columns",
+      "icon": "fa fa-edit",
+      "template": "\n\n",
+      "properties": {
+        "padding_left": "25px",
+        "padding_right": "25px",
+        "classes": ""
+      },
+      "height": 100,
+      "snippets": [
+        {
+          "klass": "SnippetCol",
+          "category": "misc",
+          "icon": "fa fa-edit",
+          "template": "<div></div>",
+          "properties": {
+            "padding_left": "25px",
+            "padding_right": "25px",
+            "classes": ""
+          },
+          "height": 100,
+          "snippets": [],
+          "type": "SnippetCol",
+          "value": {},
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        },
+        {
+          "klass": "SnippetCol",
+          "category": "misc",
+          "icon": "fa fa-edit",
+          "template": "<div></div>",
+          "properties": {
+            "padding_left": "25px",
+            "padding_right": "25px",
+            "classes": ""
+          },
+          "height": 100,
+          "snippets": [
+            {
+              "name": "1 Column Row",
+              "klass": "SnippetRow",
+              "category": "Columns",
+              "icon": "fa fa-edit",
+              "template": "\n\n",
+              "properties": {
+                "padding_left": "25px",
+                "padding_right": "25px",
+                "classes": ""
+              },
+              "height": 100,
+              "snippets": [
+                {
+                  "klass": "SnippetCol",
+                  "category": "misc",
+                  "icon": "fa fa-edit",
+                  "template": "<div></div>",
+                  "properties": {
+                    "padding_left": "25px",
+                    "padding_right": "25px",
+                    "classes": ""
+                  },
+                  "height": 100,
+                  "snippets": [
+                    {
+                      "name": "1 Column Row",
+                      "klass": "SnippetRow",
+                      "category": "Columns",
+                      "icon": "fa fa-edit",
+                      "template": "\n\n",
+                      "properties": {
+                        "padding_left": "25px",
+                        "padding_right": "25px",
+                        "classes": ""
+                      },
+                      "height": 100,
+                      "snippets": [
+                        {
+                          "klass": "SnippetCol",
+                          "category": "misc",
+                          "icon": "fa fa-edit",
+                          "template": "<div></div>",
+                          "properties": {
+                            "padding_left": "25px",
+                            "padding_right": "25px",
+                            "classes": ""
+                          },
+                          "height": 100,
+                          "snippets": [
+                            {
+                              "name": "1 Column Row",
+                              "klass": "SnippetRow",
+                              "category": "Columns",
+                              "icon": "fa fa-edit",
+                              "template": "\n\n",
+                              "properties": {
+                                "padding_left": "25px",
+                                "padding_right": "25px",
+                                "classes": ""
+                              },
+                              "height": 100,
+                              "snippets": [
+                                {
+                                  "klass": "SnippetCol",
+                                  "category": "misc",
+                                  "icon": "fa fa-edit",
+                                  "template": "<div></div>",
+                                  "properties": {
+                                    "padding_left": "25px",
+                                    "padding_right": "25px",
+                                    "classes": ""
+                                  },
+                                  "height": 100,
+                                  "snippets": [
+                                    {
+                                      "name": "Header Text",
+                                      "kind": "blunt.headertext",
+                                      "klass": "Snippet",
+                                      "category": "Media",
+                                      "icon": "fa fa-edit",
+                                      "template": "\n    <!-- Header Text -->\n    <div class=\"editable-header\">{{{header}}}</div>\n    <div class=\"editable-text\">{{{text}}}</div>\n     {{>linkText}}\n",
+                                      "properties": {
+                                        "header": "<h1 style=\"margin-top: 21px; margin-bottom: 10.5px; font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(44, 62, 80); font-size: 39px; text-align: center;\">Discover great feautres</h1><h2><p style=\"margin-bottom: 10.5px; color: rgb(44, 62, 80); font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: center;\">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p></h2>",
+                                        "text": "",
+                                        "link": "http://bluntsoftware.com",
+                                        "icon": "fa-edit"
+                                      },
+                                      "value": {
+                                        "header": "<h1 style=\"margin-top: 21px; margin-bottom: 10.5px; font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(44, 62, 80); font-size: 39px; text-align: center;\">Discover great feautres</h1><h2><p style=\"margin-bottom: 10.5px; color: rgb(44, 62, 80); font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: center;\">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p></h2>",
+                                        "text": "",
+                                        "link": "http://bluntsoftware.com",
+                                        "icon": "fa-edit"
+                                      },
+                                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                    }
+                                  ],
+                                  "type": "SnippetCol",
+                                  "value": {},
+                                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                }
+                              ],
+                              "columns": "12",
+                              "type": "SnippetRow",
+                              "value": {},
+                              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                            },
+                            {
+                              "name": "2 Column Row",
+                              "klass": "SnippetRow2Col",
+                              "category": "Columns",
+                              "icon": "fa fa-edit",
+                              "template": "\n\n",
+                              "properties": {
+                                "padding_left": "25px",
+                                "padding_right": "25px",
+                                "classes": ""
+                              },
+                              "height": 100,
+                              "snippets": [
+                                {
+                                  "klass": "SnippetCol",
+                                  "category": "misc",
+                                  "icon": "fa fa-edit",
+                                  "template": "<div></div>",
+                                  "properties": {
+                                    "padding_left": "25px",
+                                    "padding_right": "25px",
+                                    "classes": ""
+                                  },
+                                  "height": 100,
+                                  "snippets": [
+                                    {
+                                      "name": "Header Text",
+                                      "kind": "blunt.headertext",
+                                      "klass": "Snippet",
+                                      "category": "Media",
+                                      "icon": "fa fa-edit",
+                                      "template": "\n    <!-- Header Text -->\n    <div class=\"editable-header\">{{{header}}}</div>\n    <div class=\"editable-text\">{{{text}}}</div>\n     {{>linkText}}\n",
+                                      "properties": {
+                                        "header": "<h2 style=\"font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(44, 62, 80); margin-top: 21px; margin-bottom: 10.5px; font-size: 32px;\">Perfectly designed</h2><h2 style=\"color: rgb(200, 200, 200);\"><p style=\"margin-bottom: 10.5px; color: rgb(44, 62, 80); font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px;\">INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p></h2>",
+                                        "text": "",
+                                        "link": "http://bluntsoftware.com",
+                                        "icon": "fa-edit"
+                                      },
+                                      "value": {
+                                        "header": "<h2 style=\"font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(44, 62, 80); margin-top: 21px; margin-bottom: 10.5px; font-size: 32px;\">Perfectly designed</h2><h2><p style=\"margin-bottom: 10.5px; color: rgb(44, 62, 80); font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px;\">INSPINIA Admin Theme is a premium admin dashboard template with flat design concept. It is fully responsive admin dashboard template built with Bootstrap 3+ Framework, HTML5 and CSS3, Media query. It has a huge collection of reusable UI components and integrated with latest jQuery plugins.</p></h2>",
+                                        "text": "",
+                                        "link": "http://bluntsoftware.com",
+                                        "icon": "fa-edit"
+                                      },
+                                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                    }
+                                  ],
+                                  "type": "SnippetCol",
+                                  "value": {},
+                                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                },
+                                {
+                                  "klass": "SnippetCol",
+                                  "category": "misc",
+                                  "icon": "fa fa-edit",
+                                  "template": "<div></div>",
+                                  "properties": {
+                                    "padding_left": "25px",
+                                    "padding_right": "25px",
+                                    "classes": ""
+                                  },
+                                  "height": 100,
+                                  "snippets": [
+                                    {
+                                      "name": "Image",
+                                      "kind": "bootstrap.image",
+                                      "klass": "Snippet",
+                                      "category": "Media",
+                                      "icon": "fa fa-edit",
+                                      "template": "\n    <!-- Image -->\n    <img alt=\"Alt Image\" src=\"{{image}}\" class=\"{{responsive}} {{imgtype}}\" />\n",
+                                      "properties": {
+                                        "image": "http://bluntsoftware.com/ReachOut/img/dashboard.png",
+                                        "responsive": "img-responsive",
+                                        "imgtype": ""
+                                      },
+                                      "value": {
+                                        "image": "http://bluntsoftware.com/ReachOut/img/dashboard.png",
+                                        "responsive": "img-responsive",
+                                        "imgtype": ""
+                                      },
+                                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                    }
+                                  ],
+                                  "type": "SnippetCol",
+                                  "value": {},
+                                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                }
+                              ],
+                              "columns": "7 5",
+                              "type": "SnippetRow",
+                              "value": {},
+                              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                            },
+                            {
+                              "name": "1 Column Row",
+                              "klass": "SnippetRow",
+                              "category": "Columns",
+                              "icon": "fa fa-edit",
+                              "template": "\n\n",
+                              "properties": {
+                                "padding_left": "25px",
+                                "padding_right": "25px",
+                                "classes": ""
+                              },
+                              "height": 100,
+                              "snippets": [
+                                {
+                                  "klass": "SnippetCol",
+                                  "category": "misc",
+                                  "icon": "fa fa-edit",
+                                  "template": "<div></div>",
+                                  "properties": {
+                                    "padding_left": "25px",
+                                    "padding_right": "25px",
+                                    "classes": ""
+                                  },
+                                  "height": 100,
+                                  "snippets": [
+                                    {
+                                      "name": "Header Text",
+                                      "kind": "blunt.headertext",
+                                      "klass": "Snippet",
+                                      "category": "Media",
+                                      "icon": "fa fa-edit",
+                                      "template": "\n    <!-- Header Text -->\n    <div class=\"editable-header\">{{{header}}}</div>\n    <div class=\"editable-text\">{{{text}}}</div>\n     {{>linkText}}\n",
+                                      "properties": {
+                                        "header": "<h1 style=\"margin-top: 21px; margin-bottom: 10.5px; font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(44, 62, 80); font-size: 39px; text-align: center;\">Our Team</h1><h2><p style=\"margin-bottom: 10.5px; color: rgb(44, 62, 80); font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: center;\">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p></h2>",
+                                        "text": "",
+                                        "link": "http://bluntsoftware.com",
+                                        "icon": "fa-edit"
+                                      },
+                                      "value": {
+                                        "header": "<h1 style=\"margin-top: 21px; margin-bottom: 10.5px; font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(44, 62, 80); font-size: 39px; text-align: center;\">Our Team</h1><h2><p style=\"margin-bottom: 10.5px; color: rgb(44, 62, 80); font-family: Lato, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 15px; text-align: center;\">Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p></h2>",
+                                        "text": "",
+                                        "link": "http://bluntsoftware.com",
+                                        "icon": "fa-edit"
+                                      },
+                                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                    },
+                                    {
+                                      "name": "3 Column Row",
+                                      "klass": "SnippetRow3Col",
+                                      "category": "Columns",
+                                      "icon": "fa fa-edit",
+                                      "template": "\n\n",
+                                      "properties": {
+                                        "padding_left": "25px",
+                                        "padding_right": "25px",
+                                        "classes": ""
+                                      },
+                                      "height": 100,
+                                      "snippets": [
+                                        {
+                                          "klass": "SnippetCol",
+                                          "category": "misc",
+                                          "icon": "fa fa-edit",
+                                          "template": "<div></div>",
+                                          "properties": {
+                                            "padding_left": "25px",
+                                            "padding_right": "25px",
+                                            "classes": ""
+                                          },
+                                          "height": 100,
+                                          "snippets": [
+                                            {
+                                              "name": "Media",
+                                              "kind": "blunt.media",
+                                              "klass": "Snippet",
+                                              "category": "Media",
+                                              "icon": "fa fa-edit",
+                                              "template": "\n    <!-- Media -->\n    <div class=\"media {{classes}}\">\n        <a href=\"#\" class=\"media-left\">\n            <img alt=\"Alt Image\" src=\"{{image}}\" class=\"media-object {{responsive}} {{imgtype}}\"/></a>\n        <div class=\"media-body\">\n            <div class=\"media-heading editable-header\"> {{{header}}} </div>\n            <div class=\"editable-text\">{{{text}}}</div>\n        </div>\n    </div>\n",
+                                              "properties": {
+                                                "image": "img/avatar3.jpg",
+                                                "responsive": "",
+                                                "header": " <h2>Nelly</h2>",
+                                                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                                                "imgtype": "img-circle"
+                                              },
+                                              "value": {
+                                                "image": "img/avatar3.jpg",
+                                                "responsive": "",
+                                                "header": " <h2>Nelly</h2>",
+                                                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                                                "imgtype": "img-circle"
+                                              },
+                                              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                            }
+                                          ],
+                                          "type": "SnippetCol",
+                                          "value": {},
+                                          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                        },
+                                        {
+                                          "klass": "SnippetCol",
+                                          "category": "misc",
+                                          "icon": "fa fa-edit",
+                                          "template": "<div></div>",
+                                          "properties": {
+                                            "padding_left": "25px",
+                                            "padding_right": "25px",
+                                            "classes": ""
+                                          },
+                                          "height": 100,
+                                          "snippets": [
+                                            {
+                                              "name": "Media",
+                                              "kind": "blunt.media",
+                                              "klass": "Snippet",
+                                              "category": "Media",
+                                              "icon": "fa fa-edit",
+                                              "template": "\n    <!-- Media -->\n    <div class=\"media {{classes}}\">\n        <a href=\"#\" class=\"media-left\">\n            <img alt=\"Alt Image\" src=\"{{image}}\" class=\"media-object {{responsive}} {{imgtype}}\"/></a>\n        <div class=\"media-body\">\n            <div class=\"media-heading editable-header\"> {{{header}}} </div>\n            <div class=\"editable-text\">{{{text}}}</div>\n        </div>\n    </div>\n",
+                                              "properties": {
+                                                "image": "http://bluntsoftware.com/ReachOut/img/avatar1.jpg",
+                                                "responsive": "",
+                                                "header": " <h2>Bob</h2>",
+                                                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                                                "imgtype": "img-circle"
+                                              },
+                                              "value": {
+                                                "image": "http://bluntsoftware.com/ReachOut/img/avatar1.jpg",
+                                                "responsive": "",
+                                                "header": " <h2>Bob</h2>",
+                                                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                                                "imgtype": "img-circle"
+                                              },
+                                              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                            }
+                                          ],
+                                          "type": "SnippetCol",
+                                          "value": {},
+                                          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                        },
+                                        {
+                                          "klass": "SnippetCol",
+                                          "category": "misc",
+                                          "icon": "fa fa-edit",
+                                          "template": "<div></div>",
+                                          "properties": {
+                                            "padding_left": "25px",
+                                            "padding_right": "25px",
+                                            "classes": ""
+                                          },
+                                          "height": 100,
+                                          "snippets": [
+                                            {
+                                              "name": "Media",
+                                              "kind": "blunt.media",
+                                              "klass": "Snippet",
+                                              "category": "Media",
+                                              "icon": "fa fa-edit",
+                                              "template": "\n    <!-- Media -->\n    <div class=\"media {{classes}}\">\n        <a href=\"#\" class=\"media-left\">\n            <img alt=\"Alt Image\" src=\"{{image}}\" class=\"media-object {{responsive}} {{imgtype}}\"/></a>\n        <div class=\"media-body\">\n            <div class=\"media-heading editable-header\"> {{{header}}} </div>\n            <div class=\"editable-text\">{{{text}}}</div>\n        </div>\n    </div>\n",
+                                              "properties": {
+                                                "image": "http://bluntsoftware.com/ReachOut/img/avatar2.jpg",
+                                                "responsive": "",
+                                                "header": " <h2>Fred</h2>",
+                                                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                                                "imgtype": "img-circle"
+                                              },
+                                              "value": {
+                                                "image": "http://bluntsoftware.com/ReachOut/img/avatar2.jpg",
+                                                "responsive": "",
+                                                "header": " <h2>Fred</h2>",
+                                                "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                                                "imgtype": "img-circle"
+                                              },
+                                              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                            }
+                                          ],
+                                          "type": "SnippetCol",
+                                          "value": {},
+                                          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                        }
+                                      ],
+                                      "columns": "4 4 4",
+                                      "type": "SnippetRow",
+                                      "value": {},
+                                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                    }
+                                  ],
+                                  "type": "SnippetCol",
+                                  "value": {},
+                                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                                }
+                              ],
+                              "columns": "12",
+                              "type": "SnippetRow",
+                              "value": {},
+                              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                            }
+                          ],
+                          "type": "SnippetCol",
+                          "value": {},
+                          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                        }
+                      ],
+                      "columns": "12",
+                      "type": "SnippetRow",
+                      "value": {},
+                      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                    }
+                  ],
+                  "type": "SnippetCol",
+                  "value": {},
+                  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+                }
+              ],
+              "columns": "12",
+              "type": "SnippetRow",
+              "value": {},
+              "javascript": "function sayHello(){ console.log(data);};sayHello();"
+            }
+          ],
+          "type": "SnippetCol",
+          "value": {},
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        },
+        {
+          "klass": "SnippetCol",
+          "category": "misc",
+          "icon": "fa fa-edit",
+          "template": "<div></div>",
+          "properties": {
+            "padding_left": "25px",
+            "padding_right": "25px",
+            "classes": ""
+          },
+          "height": 100,
+          "snippets": [],
+          "type": "SnippetCol",
+          "value": {},
+          "javascript": "function sayHello(){ console.log(data);};sayHello();"
+        }
+      ],
+      "columns": "1 10 1",
+      "type": "SnippetRow",
+      "value": {},
+      "javascript": "function sayHello(){ console.log(data);};sayHello();"
+    }
+  ],
+  "_id": "74adb10e-e824-4599-8392-ddbf48fdd276",
+  "value": {},
+  "javascript": "function sayHello(){ console.log(data);};sayHello();"
+}

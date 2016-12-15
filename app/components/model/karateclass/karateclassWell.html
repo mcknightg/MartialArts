@@ -1,0 +1,43 @@
+
+
+<div ng-include src="'views/martialarts/forms/karateclass.html'"></div>
+<div  xmlns="http://www.w3.org/1999/html">
+    <!-- Page Heading -->
+    <div class="row wrapper border-bottom white-bg page-heading">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                <i class="fa fa-sitemap"></i> {{name}}s
+            </h1>
+            <ol class="breadcrumb panel-yellow">
+                <li>
+                    <i class="fa fa-dashboard"></i> <a href="#"> Dashboard</a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-sitemap"></i> {{name}}s
+                </li>
+                <li>
+                    <!-- data-toggle="modal" -->
+                    <i ng-click="" class="fa fa-plus-square"></i> Add {{name}}
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div class="row" >
+
+        <div class="col-sm-4" ng-repeat="page in modelList.rows">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h3 class="panel-title"><i class="fa fa-sitemap"></i> {{page.name | uppercase}} {{name | uppercase}}
+                        <i ng-click="update(page.id)" class="pull-right fa fa-pencil-square"></i>
+                        <i ng-click="remove(page.id)" class="pull-right fa fa-trash"></i>
+                    </h3>
+
+                </div>
+                <div class="ibox-content">
+                    <a>Name : {{page.name}}</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

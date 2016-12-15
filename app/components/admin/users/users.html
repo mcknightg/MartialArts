@@ -1,0 +1,45 @@
+<div class="col-sm-5">
+    <form ng-submit="search()" >
+        <div class="input-group">
+            <input type="text" ng-model="srchterm" class="form-control" placeholder="Search " name="srchterm" id="srchterm">
+            <div class="input-group-btn">
+                <button ng-click="search()" class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<table class="table table-responsive table-hover table-striped push-down">
+    <thead>
+    <tr>
+        <th>Mug</th>
+        <th>Login</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Company</th>
+        <th>Activated</th>
+        <th class="text-center"><button ng-click="new()" class="btn btn-sm btn-primary">ADD</button></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-show="(modelList.rows).length === 0">
+        <td colspan="10">No Records Imported Yet !</td>
+    </tr>
+    <tr ng-click="update(item.id)" id="{{item.id}}" ng-repeat="item in modelList.rows">
+        <td ng-show="item.imgSrc"><img  alt="Alt Image"  class="img-responsive img-thumbnail" image-resize image-width="50" ng-src="{{item.imgSrc}}" ></td>
+        <td ng-hide="item.imgSrc"><img  alt="Alt Image"  class="img-responsive img-thumbnail" image-resize image-width="50" ng-src="img/no_pic.jpg" ></td>
+        <td>{{item.login}}-{{item.langKey}}</td>
+        <td>{{item.firstName}} {{item.lastName}}</td>
+        <td><a href="mailto:{{item.email}}">{{item.email}}</a></td>
+        <td>{{item.tenantId}}</td>
+        <td>{{item.activated}}</td>
+        <!--  <td ng-click="update(item.id)"><i class="fa fa-edit fa-2x"></i></td> -->
+        <td ng-click="remove(item.id)" class="text-center" ><i class="fa fa-trash fa-2x"></i></td>
+    </tr>
+    </tbody>
+</table>
+
+<pagination boundary-links="true" boundary-link-numbers="true" num-pages="modelList.totalpages" ng-model="modelList.currpage" ng-change="setPage(modelList.currpage)" max-size="5" total-items="modelList.totalrecords" items-per-page="listParams.rows"></pagination>
+<ul class="pagination pagination-sm pull-right">
+    <li>Page {{modelList.currpage}} of {{modelList.totalpages}} - {{modelList.totalrecords}} Records </li>
+</ul>

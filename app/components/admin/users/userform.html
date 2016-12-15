@@ -1,0 +1,109 @@
+<form name="form" role="form" novalidate class="panel panel-default ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength"
+      ng-submit="create()">
+    <div class="modal-header panel-heading">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="back()">&times;</button>
+        <h4 class="modal-title" id="myDeviceLabel">Application User</h4>
+    </div>
+    <div class="modal-body">
+        <div class="container-padding">
+            <div class="row container-padding">
+                <div class="container-padding col-sm-1"></div>
+                <div class="container-padding col-sm-10">
+                    <div class="row container-padding">
+                        <div class="container-padding col-sm-2">
+                            <!-- Image -->
+                            <img ng-show="imageSrc" alt="Alt Image"  class="img-responsive img-thumbnail" image-resize image-width="200" ng-src="{{imageSrc}}" >
+                            <img ng-hide="imageSrc" alt="Alt Image"  class="img-responsive img-thumbnail" image-resize image-width="200" ng-src="img/no_pic.jpg" >
+                            <file-field class="btn-sm btn-success" ng-model="uploadFile" preview="imageSrc">Photo</file-field>
+                            <button class="btn btn-sm btn-warning fa fa-rotate-right" ng-click="rotateImage()"></button>
+                            <p>Roles for {{modelData.firstName}}</p>
+                            <div class="col-lg-6 col-md-4 col-sm-12">
+                                <div class="row panel"  ng-repeat="userRole in userRoles">
+                                    <button type="button" class="btn btn-default"   ng-click="removeRole(userRole.id)">
+                                        <span class="glyphicon glyphicon-ban-circle"></span> {{userRole.authority.authority}}
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="container-padding col-sm-5">
+
+                            <input type="hidden" class="form-control" name="id" ng-model="modelData.id" readonly>
+                            <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" class="form-control" name="firstName" ng-model="modelData.firstName"
+                                       ng-minlength=1 ng-maxlength=50>
+                            </div>
+                            <div class="form-group">
+                                <label>Login</label>
+                                <input type="text" class="form-control" name="login" ng-model="modelData.login"
+                                       ng-minlength=1 ng-maxlength=50>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Company</label>
+                                <input type="text" class="form-control" name="tenantId" ng-model="modelData.tenantId"
+                                       ng-minlength=1 ng-maxlength=50>
+                            </div>
+                            <div class="form-group">
+                                <label>Activation Key</label>
+                                <input type="text" class="form-control" name="activationKey"
+                                       ng-model="modelData.activationKey" ng-minlength=1 ng-maxlength=20>
+                            </div>
+                            <div  class="form-group">
+                                <label>Roles</label>
+                                <div class="input-group">
+                                    <select class="form-control input-md" ng-model="roleIdToAdd" ng-options="role.id as role.authority for role in roles.rows"></select>
+                                    <span class="input-group-addon btn btn-sm btn-default" type="button" ng-click="addRole()" >
+                                            <span class="glyphicon glyphicon-plus"></span> Add Role
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-padding col-sm-5">
+
+                            <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" class="form-control" name="lastName" ng-model="modelData.lastName"
+                                       ng-minlength=1 ng-maxlength=50>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control" name="email" ng-model="modelData.email"
+                                       ng-minlength=1 ng-maxlength=50>
+                            </div>
+                            <div class="form-group">
+                                <label>Language</label>
+                                <input type="text" class="form-control" name="langKey" ng-model="modelData.langKey"
+                                       ng-minlength=1 ng-maxlength=5>
+                            </div>
+                            <div class="form-group">
+                                <label>Activated</label>
+                                <input type="checkbox" class="form-control" name="activated"
+                                       ng-model="modelData.activated">
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container-padding col-sm-1"></div>
+            </div>
+
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="back()">
+                    <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+                </button>
+                <button ng-disabled="form.$invalid" class="btn btn-primary" ng-click="save()">
+                    <span class="glyphicon glyphicon-save"></span> Save
+                </button>
+            </div>
+        </div>
+    </div>
+</form>

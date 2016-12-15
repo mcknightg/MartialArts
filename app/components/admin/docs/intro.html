@@ -1,0 +1,58 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="text-center m-t-lg">
+                <h1>
+                    Angular Global $rootScope variables and functions.
+                </h1>
+            </div>
+        </div>
+         All $scope objects have the following variables and functions.
+         <pre><code class="language-javascript" prism>
+             //The account of the currently logged in user
+             $scope.account = {
+                login:'billyb',
+                firstname:'Billy',
+                lastName:'Bob',
+                email:'billyBob@gmail.com',
+                roles:['ROLE_ADMIN','ROLE_SUPER_ADMIN','ROLE_USER'],
+             }
+             //The currently recognized roles
+             $scope.userRoles = {
+                    all: '*',
+                    admin: 'ROLE_ADMIN',
+                    superUser:'ROLE_SUPER_USER',
+                    user: 'ROLE_USER'
+             });
+             //Returns true if the current logged in user has admin privileges
+             $scope.isAdmin();
+             //Returns true if the current logged in user has super user privileges
+             $scope.isSuperUser();
+             //Returns true if the current logged in user has the role provided
+             $scope.isAuthorized(role);
+             //Returns true if the user is currently logged in
+             $scope.authenticated;
+
+         </code></pre>
+         Example usage in an HTML file
+         <pre><code class="language-markup" prism>
+             &ltli ng-show="isAdmin()">
+                &lta ui-sref="admin">{{account.firstName}}&lt/a>
+             &lt/li>
+         </code></pre>
+
+        <ul>
+            <li><strong>Google</strong>: <a href="https://console.developers.google.com/start" rel="nofollow">https://console.developers.google.com/start</a></li>
+            <li><strong>LinkedIn</strong>:<a href="https://www.linkedin.com/secure/developer" rel="nofollow">https://www.linkedin.com/secure/developer</a></li>
+            <li><strong>GitHub</strong>: <a href="https://github.com/settings/developers" rel="nofollow">https://github.com/settings/developers</a></li>
+            <li><strong>Twitter</strong>: <a href="https://apps.twitter.com" rel="nofollow">https://apps.twitter.com</a></li>
+        </ul>
+
+
+         <pre><code class="language-javascript" prism>
+
+
+         </code></pre>
+
+    </div>
+</div>

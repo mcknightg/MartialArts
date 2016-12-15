@@ -1,0 +1,51 @@
+<div id="serverConfig" class="tabbable skin-setttings">
+    <form id='serverConfigForm' class="form">
+        <div>
+            <div class="row ">
+                <div class="col-sm-3">
+                    <!-- Text Input-->
+                    <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <input class="form-control input-sm" name="name" placeholder="name of the connection" type="text">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <!-- Text Input-->
+                    <div class="form-group">
+                        <label class="control-label">Url</label>
+                        <input class="form-control input-sm" name="url" placeholder="url of the endpoint" type="text">
+                    </div>
+                </div>
+                <div class=" col-sm-1">
+                    <!-- Button (Single) -->
+                    <div class="control-group">
+                        <label class="control-label"></label>
+                        <div class="controls">
+                            <button class="addConnection btn btn-default btn-sm " type="button">
+                                <i class="editable-label buttonlabel fa fa-edit">
+                                    Save</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-12">
+            <!-- Striped Table -->
+            <table class="table table-bordered  table-condensed">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Url</th>
+                </tr>
+                </thead>
+                <tbody id="connection_list">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

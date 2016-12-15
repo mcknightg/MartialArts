@@ -1,0 +1,20 @@
+<div id="wrapper" class="hideside"> <!-- class="hideside" -->
+    <div   class="gray-bg {{$state.current.name}}">
+        <!-- SIDEBAR -->
+        <div id="sidebar-wrapper" class="navbar-default">
+            <div ng-include="'components/admin/layout/sidenav.html'"></div>
+        </div>
+        <!-- TOP NAV BAR -->
+         <div id="nav-wrapper">
+            <div  ng-include="'components/admin/layout/topnavbar.html'"></div>
+        </div>
+        <!-- CONTENT -->
+        <div  id="page-content-wrapper" >
+            <div  ui-view></div>
+        </div>
+        <!-- FOOTER -->
+        <div id="footer-wrapper">
+            <div ng-include="'components/layout/footer.html'"></div>
+        </div>
+    </div>
+</div>

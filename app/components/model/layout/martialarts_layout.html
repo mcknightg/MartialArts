@@ -1,0 +1,21 @@
+<div id="wrapper" class=""> <!-- class="hideside" -->
+    <div   class="gray-bg {{$state.current.name}}">
+        <!-- SIDEBAR -->
+        <div id="sidebar-wrapper" class="navbar-default">
+            <div ng-include="'components/model/sidenav/martialarts_sidenav.html'"></div>
+        </div>
+        <!-- TOP NAV BAR -->
+        <div id="nav-wrapper">
+            <div  ng-include="'components/admin/topnav/topnavbar.html'"></div>
+        </div>
+        <!-- CONTENT -->
+        <div  id="page-content-wrapper">
+            <div ui-view></div>
+        </div>
+        <!-- FOOTER -->
+        <div id="footer-wrapper">
+            <div ng-include="'components/footer/footer.html'"></div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,343 @@
+<!--suppress ALL -->
+
+<script type="text/template"  kind='bootstrap.row' klass='SnippetRow' name="1 Column Row" icon="fa fa-edit" category="Columns">
+
+</script>
+<script type="text/template" kind='bootstrap.row' klass='SnippetRow2Col' name="2 Column Row" icon="fa fa-edit" category="Columns">
+
+</script>
+<script type="text/template" kind='bootstrap.row' klass='SnippetRow3Col' name="3 Column Row" icon="fa fa-edit" category="Columns">
+
+</script>
+<script type="text/template" kind='bootstrap.row' klass='SnippetRow4Col' name="4 Column Row" icon="fa fa-edit" category="Columns">
+
+</script>
+
+<script type="text/template" kind='bootstrap.nav' klass='SnippetNavBar' name="Nav Bar" icon="fa fa-edit" category="Media">
+
+</script>
+<script type="text/template" kind='bootstrap.navItem' klass='SnippetNavBarItem' name="Nav Bar Item" icon="fa fa-edit" category="Media">
+
+</script>
+
+
+<script type="text/template"  klass='SnippetPanel' kind='bootstrap.panel' name="Content Panel" icon="fa fa-edit" category="Media">
+    <!-- Content Panel -->
+</script>
+
+<script type="text/template"  klass='Snippet' kind='bootstrap.panel' name="Text Panel" icon="fa fa-edit" category="Media">
+    <!-- Text Panel -->
+    <div class="panel {{panelColor}}">
+        <div class="panel-heading editable-header">{{{header}}}</div>
+        <div class="panel-body editable-text">{{{text}}}</div>
+        <div class="panel-footer editable-footer">{{{footer}}}</div>
+    </div>
+</script>
+
+<script type="text/template" kind='bootstrap.carousel' klass='Snippet' name="Carousel" icon="fa fa-edit" category="Media">
+    <!-- Carousel -->
+    <div id="{{id}}" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {{#each carouselList}}
+                <li data-target="#{{@root.id}}" data-slide-to="{{@index}}" class="test {{#if @first}}active{{/if}}" ></li>
+            {{/each}}
+        </ol>
+        <div class="carousel-inner" role="listbox" >
+            {{#each carouselList}}
+                <div class="item {{#if @first}}active{{/if}}">
+                    {{#if  @root.scale }} <div class="container">  {{/if}}
+                        <div class="carousel-caption">
+                            <h4>{{{header}}}</h4>
+                            <p> {{{text}}}</p>
+                        </div>
+                {{#if @root.scale}} </div>  {{/if}}
+                {{#if @root.scale}} <div class="header-back">  {{/if}}
+                        <img alt="Carousel Bootstrap First" src="{{image}}"/>
+                {{#if @root.scale}}  </div>   {{/if}}
+                </div>
+            {{/each}}
+        </div>
+        <a class="left carousel-control" data-target="#{{id}}" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"  aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a  class="right carousel-control" data-target="#{{id}}" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"  aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</script>
+<script type="text/template" kind='bootstrap.jumbotron' klass='Snippet' name="Jumbotron" icon="fa fa-dot-circle-o" category="Media">
+    <!-- Jumbotron -->
+    <div class="jumbotron {{classes}}">
+        <h1 class="editable-header">{{{header}}}</h1>
+        <p class="editable-text">{{{text}}}</p>
+        <p><a class="btn editable-label {{ buttontype}} {{buttonsize}} {{fullwidth}}" href="#" role="button">{{ buttonlabel}}</a></p>
+    </div>
+</script>
+
+<script type="text/template" kind='bootstrap.horizontal_line' klass='Snippet' name="Horizontal Line" icon="fa fa-edit" category="Media">
+    <!-- Horizontal Line -->
+    <div style="border-top:1px solid rgb(185, 185, 185);height:1px;padding:10px;width:100%"></div>
+</script>
+
+<script type="text/template" kind='bootstrap.tab' klass='SnippetTabRow' name="Tabs" icon="fa fa-edit" category="Media">
+    <!-- Tab Row -->
+         <ul>
+
+         </ul>
+</script>
+
+<script type="text/template"  klass='Snippet' kind='blunt.headertext' name="Header Text" icon="fa fa-edit" category="Media">
+    <!-- Header Text -->
+    <div class="editable-header">{{{header}}}</div>
+    <div class="editable-text">{{{text}}}</div>
+     {{>linkText}}
+</script>
+
+<script type="text/template" klass='Snippet'  kind='blunt.media' name="Media" icon="fa fa-edit" category="Media">
+    <!-- Media -->
+    <div class="media {{classes}}">
+        <a href="#" class="media-left">
+            <img alt="Alt Image" src="{{image}}" class="media-object {{responsive}} {{imgtype}}"/></a>
+        <div class="media-body">
+            <div class="media-heading editable-header"> {{{header}}} </div>
+            <div class="editable-text">{{{text}}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="text/template"  kind='bootstrap.image' klass='Snippet' name="Image" icon="fa fa-edit" category="Media">
+    <!-- Image -->
+    <img alt="Alt Image" src="{{image}}" class="{{responsive}} {{imgtype}}" />
+</script>
+
+<script type="text/template"  kind='bootstrap.movie' klass='Snippet' name="Movie" icon="fa fa-edit" category="Media">
+    <!-- Movie -->
+    <div style="padding: 25px">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="{{movie}}"></iframe>
+        </div>
+    </div>
+ </script>
+
+<script type="text/template"  klass='Snippet' kind="blunt.address" name="Address" icon="fa fa-edit" category="Media">
+    <address class="{{classes}} editable-text">{{{text}}}</address>
+</script>
+
+
+<script type="text/template" kind='bootstrap.form' klass='SnippetForm' name="Form" icon="fa fa-edit" category="Forms">
+    <!-- Form -->
+    <form class="form {{type}}">
+        {{>legend}}
+    </form>
+</script>
+
+<script type="text/template" kind='bootstrap.field' klass='SnippetField' name="Text Input" icon="fa fa-edit" category="Forms">
+    <!-- Text Input-->
+    <div class="form-group">
+        {{#if label}}<label class="control-label editable-label" for="{{ id }}">{{ label }}</label> {{/if}}
+        {{> textfield}}
+        {{> helptext}}
+    </div>
+</script>
+
+<script type="text/template" kind='bootstrap.field' klass='SnippetField' name="Icon Picker" icon="fa fa-edit" category="Forms">
+    <label class="control-label editable-label" for="{{ id }}">{{ label }}</label>
+    <div class="input-group">
+        <input {{> idNameField}} class="form-control input-sm" type="text">
+        <span class="input-group-btn">
+            <button  type="button"  class="btn btn-success btn-sm" data-iconset="fontawesome" role="iconpicker"></button>
+        </span>
+    </div>
+</script>
+
+<script type="text/template" kind='bootstrap.field' klass='SnippetField' name="Text Area" icon="fa fa-edit" category="Forms">
+    <!-- Text Area -->
+    <div class="form-group">
+        <label class=" control-label editable-label" for="{{ id }}">{{ label }}</label>
+        <textarea  class="form-control {{classes}}" {{> idNameField}} {{>required}} {{>readonly}} >{{ textarea }}</textarea>
+    </div>
+</script>
+
+<script type="text/template" kind='bootstrap.field' klass='SnippetField' name="Appended Check" icon="fa fa-edit" category="Forms">
+    <!-- Appended Check -->
+    <div>
+        <label class="control-label editable-label" for="{{id}}">{{label}}</label>
+        <div class="input-group">
+            {{> textfield}}
+            <span class="input-group-addon">
+                <input class="{{classes}}" type="checkbox" {{checked}}/>
+            </span>
+        </div>
+        {{> helptext}}
+    </div>
+</script>
+
+<script type="text/template" kind='bootstrap.field' klass='SnippetField' id="appendedtext" name="Appended Text" icon="fa fa-edit"
+        category="Forms">
+    <!-- Select Basic -->
+    <label class="control-label editable-label" for="{{ id }}">{{ label }}</label>
+    <div class="input-group">
+        {{> textfield}}
+        <span class="input-group-addon">{{ append }}</span>
+    </div>
+        {{> helptext}}
+</script>
+<script type="text/template" kind='bootstrap.field' klass='SnippetField' name="Prepend Checkbox" icon="fa fa-edit" category="Forms">
+    <!-- Prepend Checkbox -->
+    <label class="control-label editable-label" for="{{id}}">{{label}}</label>
+    <div class="input-group">
+        <span class="input-group-addon">
+            <input type="checkbox" {{checked}}/>
+        </span>
+        {{> textfield}}
+    </div>
+        {{> helptext}}
+</script>
+
+<script type="text/template" kind='bootstrap.field' klass='SnippetField' name="Prepend Text" icon="fa fa-edit" category="Forms">
+    <!-- Select Basic -->
+    <label class="control-label editable-label" for="{{ id }}">{{ label }}</label>
+    <div class="input-group">
+        <span class="input-group-addon">{{ append }}</span>
+        {{> textfield}}
+    </div>
+        {{> helptext}}
+</script>
+
+<script type="text/template" kind='bootstrap.field' klass='SnippetField' name="Button Dropdown" icon="fa fa-edit" category="Forms">
+    <!-- Button Drop Down -->
+    <label class="control-label editable-label" for="{{ id }}">{{ label }}</label>
+    <div class="input-group">
+        <input class="form-control {{classes}} {{ inputsize }}" type="text" {{> idNameField}} {{>placeholder}} {{>required}} {{>readonly}}/>
+        <div class="input-group-btn">
+            <button type="button"  class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                {{ buttontext }}
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                {{#each buttonoptions}}
+                    <li><a href="#">{{ value }}</a></li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" kind='bootstrap.field' klass='SnippetField' name="Password Input" icon="fa fa-edit" category="Forms">
+    <!-- Password Input -->
+    <div class="control-group">
+        <label class="control-label editable-label" for="{{ id }}">{{ label }}</label>
+        <input class="form-control {{classes}} {{ inputsize }}"  type="password" {{> idNameField}} {{>placeholder}} {{>required}} {{>readonly}} />
+        {{> helptext}}
+    </div>
+</script>
+
+
+<script type="text/template" kind='bootstrap.checkbox' klass='SnippetField' name="Checkbox" icon="fa fa-check-square-o" category="Forms">
+    <!-- Multi Check Box -->
+    <div class="control-group">
+        <label class="control-label editable-label" for="{{ name }}">{{ label }}</label>
+        <div class="controls">
+            {{#each checkboxes}}
+                <label class="{{@root.inline}}" for="{{id}}">
+                    <input class="{{classes}}" type="checkbox"  {{> idNameField}} value="{{ value }}" {{>checked}}>
+                    {{ label }}
+                </label>
+            {{/each}}
+        </div>
+    </div>
+</script>
+
+
+<script type="text/template" kind='bootstrap.radio' klass='SnippetField' name="Radio" icon="fa fa-dot-circle-o" category="Forms">
+    <!-- Radio -->
+    <div class="control-group">
+        <label class="control-label editable-label" for="{{ name }}">{{ label }}</label>
+        <div class="controls">
+            {{#each radios}}
+                <label class="{{@root.inline}}" for="{{ id }}">
+                    <input class="{{classes}}" type="radio" name="{{@root.name}}" {{> id}} value="{{ value }}" >
+                    {{ label }}
+                </label>
+            {{/each}}
+        </div>
+    </div>
+</script>
+
+<script type="text/template" kind='bootstrap.search.field' klass='SnippetSearchField' name="Search Select" icon="fa fa-chevron-down" category="Forms">
+    <!-- Select -->
+
+</script>
+
+<script type="text/template" kind='bootstrap.select' klass='SnippetField' name="Select" icon="fa fa-chevron-down" category="Forms">
+    <!-- Select -->
+    <div class="control-group">
+        <label class="control-label editable-label" for="{{ id }}">{{ label }}</label>
+        <div class="controls">
+            <select  {{> idNameField}} class="form-control {{classes}} {{inputsize}} " {{>multiple}}>
+                {{#each options}}
+                    <option value="{{value}}" {{>selected}}>{{ label }}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+</script>
+
+
+<!-- Table Category -->
+<script type="text/template" klass='SnippetTable' kind="bootstrap.table" name="Striped Table" icon="fa fa-square-o" category="Tables | Lists">
+
+</script>
+<script type="text/template" klass='SnippetFormList' kind="bootstrap.form.list" name="Form List" icon="fa fa-newspaper-o" category="Tables | Lists">
+
+</script>
+<!-- Button Category -->
+<script type="text/template" klass='SnippetButton' kind='bootstrap.button' name="Single Button" icon="fa fa-square-o" category="Buttons | Icons">
+    <!-- Button (Single) -->
+    <div class="control-group">
+
+        <label class="control-label editable-label" for="{{id}}">{{ label}}</label>
+        <div data-id="{{snip_id}}" class="controls">
+            <a  role="button" href="{{link}}" type="button"  {{> idNameField}} class=' btn {{classes}} {{ buttontype}} {{buttonsize}} {{fullwidth}}'><i class="editable-label buttonlabel fa {{icon}}">  {{ buttonlabel}}</i> </a>
+        </div>
+    </div>
+</script>
+
+<script type="text/template" klass='SnippetButton' kind='bootstrap.doubleButton' name="Button Double" icon="fa fa-square-o" category="Buttons | Icons">
+    <!-- Button (Double) -->
+    <div class="control-group">
+        <label class="control-label editable-label" for="{{ id }}">{{ label }}</label>
+        <div data-id="{{snip_id}}" class="controls">
+            {{#each buttonList}}
+                <a  data-idx="{{@index}}" role="button" {{#if @root.edit_mode}} {{else}}href="{{link}}"{{/if}} type="button" {{> idNameField}} class=' btn {{classes}} {{ buttontype}} {{@root.buttonsize}} {{fullwidth}}'><i class="editable-label buttonlabel fa {{icon}}">  {{ buttonlabel}}</i> </a>
+            {{/each}}
+        </div>
+    </div>
+</script>
+
+<script type="text/template" klass='SnippetButton' kind='bootstrap.buttonGroup' name="Button Group" icon="fa fa-square-o" category="Buttons | Icons">
+    <!-- Button (Group) -->
+    <div data-id="{{snip_id}}" class="{{direction}} {{justify}}">
+        {{#each buttonList}}
+            <a  data-idx="{{@index}}" role="button" {{#if @root.edit_mode}} {{else}}href="{{link}}"{{/if}}  {{> idNameField}} class=' btn {{classes}} {{ buttontype}} {{@root.buttonsize}}'><i class="editable-label buttonlabel fa {{icon}}">  {{ buttonlabel}}</i> </a>
+        {{else}}
+            <a>No Buttons Added</a>
+        {{/each}}
+    </div>
+</script>
+
+<script type="text/template" klass='Snippet' kind='bootstrap.field' name="File Button" icon="fa fa-square-o" category="Buttons | Icons">
+    <!-- File Button -->
+    <label class="control-label" for="{{ id }}">{{ label }}</label>
+    <div style="margin-bottom:10px" class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-success btn-file {{classes}}">
+                                Browse&hellip; <input {{> idNameField}} type="file" accept=".gif,.jpg,.png" multiple>
+                            </span>
+                        </span>
+        <input type="text" class="form-control" readonly>
+        <span class="input-group-addon"><input type="submit"></span>
+    </div>
+</script>

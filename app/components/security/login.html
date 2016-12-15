@@ -1,0 +1,98 @@
+<div class="bg-extended">
+    <div class="align-vertical-center">
+        <div class="container">
+            <div class="row col-xs-offset-1 col-xs-10 col-sm-offset-3 col-sm-6">
+                <div class="panel panel-primary ">
+
+                    <div class="panel-heading">
+                        <h1>Sign In</h1>
+                    </div>
+                    <form class="panel-body">
+                        <div class="row">
+                            <div class="col-xs-offset-2 col-xs-2">
+                                <a ng-click="loginLinkedIn()" class="btn linkedin-fab-btn btn-fab">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </div>
+                            <div class="col-xs-2">
+                                <a ng-click="loginFacebook()" class="btn facebook-fab-btn btn-fab">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </div>
+                            <!--
+                            <div class="col-xs-2">
+                                <a ng-click="loginGithub()" class="btn github-fab-btn btn-fab">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </div>  -->
+                            <div class="col-xs-2">
+                                <a ng-click="loginGoogle()" class="btn btn-danger btn-fab">
+                                    <i class="fa fa-google"></i>
+                                </a>
+                            </div>
+                            <div class="col-xs-2">
+                                <a ng-click="loginTwitter()" class="btn twitter-fab-btn btn-fab">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1">
+                            </div>
+                            <div class="col-sm-10">
+                                <div class="form-group label-floating"
+                                     ng-class="{'has-error is-focused' : authenticationError}">
+                                    <label class="control-label" for="login">Email</label>
+                                    <input id="login" type="text" class="form-control" ng-model="username"
+                                           required="required"
+                                           placeholder="{{'login.form.username.placeholder' | translate}}"/>
+                                    <span ng-show="authenticationError" class="help-block">
+                                        Please check your credentials and try again.
+                                    </span>
+                                </div>
+                                <div class="form-group label-floating">
+                                    <label class="control-label" for="password">Password</label>
+                                    <input id="password" type="password" class="form-control" ng-model="password"
+                                           required="required"
+                                           placeholder="{{'login.form.password.placeholder' | translate}}"/>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" ng-model="rememberMe"/><span> Remember me</span>
+                                    </label>
+                                </div>
+
+
+                                <div class="col-sm-offset-3 col-sm-6">
+                                    <button class="btn  btn-primary btn-block" ng-click="login()">
+                                        Sign In
+                                    </button>
+                                </div>
+
+
+
+                            </div>
+                            <div class="col-sm-1"></div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-10">
+
+                                <div class="" translate="global.messages.info.resetpassword">
+                                    Forgot password? <a href=\"#/resetpassword\">Reset Password</a>
+                                </div>
+                                <div class="" translate="global.messages.info.register">
+                                    Don't have an account? <a href=\"#/register\">Sign up for a new account</a>
+                                </div>
+
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-xs-2 pull-right">
+                                <img ui-sref="home" class="pull-right" src="img/logo.png" style="height:64px" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

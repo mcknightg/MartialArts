@@ -1,0 +1,160 @@
+<!--
+* Catwalk - Model Builder
+* Copyright 2015 Bluntsoftware.com
+* Version 2.1
+*
+-->
+
+<!DOCTYPE html>
+<html ng-app="catwalk">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- Page title set in pageTitle directive -->
+    <title page-title></title>
+
+    <!-- Google Open Sans -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- build:css({.tmp,app}) styles/vendor.css -->
+    <!-- bower:css --
+    <!-- Font awesome -->
+	<link href="bower_components/jquery-ui/themes/base/resizable.css" rel="stylesheet">
+    <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/prism/themes/prism.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bower_components/bootstrap-iconpicker/bootstrap-iconpicker/css/bootstrap-iconpicker.min.css" rel="stylesheet" />
+ 
+    <link href="bower_components/ng-tags-input/ng-tags-input.css" rel="stylesheet" >
+    <link href="bower_components/ng-tags-input/ng-tags-input.bootstrap.css" rel="stylesheet">
+
+    <!-- Main Inspinia CSS files -->
+    <link href="styles/animate.css" rel="stylesheet">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link id="theme" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css" rel="stylesheet">
+
+    <!-- build:css({.tmp,app}) styles/style.css -->
+	<link href="lacet/lacet.css" rel="stylesheet">
+    <link href="styles/landingpage.css" rel="stylesheet">
+    <link href="styles/layout.css" rel="stylesheet">
+    <link href="styles/app.css" rel="stylesheet">
+    <!-- endbuild -->
+
+
+
+</head>
+
+<!-- ControllerAs syntax -->
+<!-- Main controller with serveral data used in Inspinia theme on diferent view -->
+<body ng-controller="MainCtrl as main">
+
+<!-- Main view  -->
+<div  ui-view></div>
+
+
+<!-- build:js({.tmp,app}) scripts/vendor.js -->
+
+<script src="bower_components/prettydiff/ace/ace.js"></script>
+<script src="bower_components/prettydiff/ace/mode-html.js"></script>
+<script src="bower_components/prettydiff/ace/mode-css.js"></script>
+<script src="bower_components/prettydiff/ace/mode-javascript.js"></script>
+<script src="bower_components/prettydiff/ace/mode-json.js"></script>
+<script src="bower_components/prettydiff/ace/theme-idle_fingers.js"></script>
+<script src="bower_components/prettydiff/prettydiff.js"></script>
+
+<!-- jQuery and Bootstrap -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/handlebars/handlebars.js"></script>
+<script src="bower_components/json-editor/dist/jsoneditor.js"></script>
+<script src="bower_components/bootstrap-iconpicker/bootstrap-iconpicker/js/iconset/iconset-fontawesome-4.2.0.js"></script>
+<script src="bower_components/bootstrap-iconpicker/bootstrap-iconpicker/js/bootstrap-iconpicker.min.js"></script>
+<script src="bower_components/bootbox/bootbox.js"></script>
+<script src="bower_components/jQuery.Hotkeys/jquery.hotkeys.js"></script>
+<script src="bower_components/bootstrap-wysiwyg/bootstrap-wysiwyg.js"></script>
+<!-- MetsiMenu -->
+<script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- SlimScroll -->
+<script src="bower_components/slimScroll/jquery.slimscroll.min.js"></script>
+
+<!-- Peace JS -->
+<script src="bower_components/PACE/pace.min.js"></script>
+<!-- Prism JS -->
+<script src="bower_components/prism/prism.js"></script>
+<!-- Angular scripts-->
+<script src="bower_components/angular/angular.js"></script>
+
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="bower_components/angular-translate/angular-translate.js"></script>
+<script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+<script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+
+<!-- Angular Dependiences -->
+<!--                      -->
+<!--                      -->
+<!--                      -->
+
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<!-- Custom and plugin javascript -->
+<script src="directives/inspinia.js"></script>
+
+<!-- Anglar App Script -->
+<script src="app.js"></script>
+
+<!-- Security -->
+<script src="components/security/http-auth-interceptor.js"></script>
+<script src="components/security/security_controllers.js"></script>
+<script src="components/security/security_config.js"></script>
+<script src="services/security/security_services.js"></script>
+<!-- Config -->
+<script src="components/layout/layout.js"></script>
+<script src="directives/directives.js"></script>
+<script src="components/home/home.js"></script>
+<script src="components/dashboard/dashboard.js"></script>
+<!-- Begin Admin -->
+<script src="components/admin/layout/layout.js"></script>
+<script src="components/admin/docs/docs.js"></script>
+<script src="components/admin/users/users.js"></script>
+<script src="components/admin/docs/services/services.js"></script>
+<script src="components/admin/docs/unit/unit.js"></script>
+<!-- Begin Lacet -->
+
+<script src="lacet/lacet.js"></script>
+<script src="lacet/directive.js"></script>
+<script src="components/admin/lacet/lacet.js"></script>
+
+<!-- Begin Services Controllers And Routers -->
+<script src="components/model/layout/martialarts_layout.js"></script>
+<script src="services/martialarts_base_service.js"></script>
+<script src="services/school/school.js"></script>
+<script src="services/student/student.js"></script>
+<script src="services/karateclass/karateclass.js"></script>
+<script src="services/user_manager_base_service.js"></script>
+<script src="services/applicationAuthority/applicationAuthority.js"></script>
+<script src="services/applicationPersistentToken/applicationPersistentToken.js"></script>
+<script src="services/applicationUser/applicationUser.js"></script>
+<script src="services/applicationUserAuthority/applicationUserAuthority.js"></script>
+<script src="services/appPassResetToken/appPassResetToken.js"></script>
+<script src="services/services.js"></script>
+<script src="components/model/school/school.js"></script>
+<script src="components/model/student/student.js"></script>
+<script src="components/model/karateclass/karateclass.js"></script>
+<!-- End Services Controllers And Routers -->
+
+<!-- endbuild -->
+
+</body>
+</html>

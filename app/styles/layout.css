@@ -1,0 +1,238 @@
+/*!
+ * Start Bootstrap - Layout
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+.ui-sortable .ibox-title {
+    cursor: move
+}
+.ibox.ui-sortable-placeholder {
+    margin: 0px 0px 23px !important
+}
+.ibox-content h1, .ibox-content h2, .ibox-content h3, .ibox-content h4, .ibox-content h5, .ibox-title h1, .ibox-title h2, .ibox-title h3, .ibox-title h4, .ibox-title h5 {
+    margin-top: 5px
+}
+.ibox-content.text-box {
+    padding-bottom: 0px;
+    padding-top: 15px
+}
+.ibox {
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0
+}
+
+.ibox:after, .ibox:before {
+    display: table
+}
+
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+
+    border-color: transparent;
+    border-image: none;
+
+    color: white;
+    margin-bottom: 0;
+    padding: 14px 15px 7px;
+    height: 48px
+}
+
+.ibox-content {
+    padding: 15px 20px 20px 20px;
+    margin: 0px 1px 1px 1px;
+}
+
+
+.bs-docs-sidebar .nav>li>a {
+    border-left: 2px solid transparent;
+    padding: 4px 20px;
+    font-size: 16px;
+    font-weight: 400;
+}
+/* Toggle Styles */
+#nav-wrapper .navbar-fixed-top{
+    left:0;
+}
+.nav-end {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+
+#footer-wrapper {
+    position: fixed;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+    background: white;
+    border-top: 1px solid #e7eaec
+}
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.hideside {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.hideside #sidebar-wrapper{
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+    padding-top: 60px;
+}
+
+#wrapper.hideside #page-content-wrapper{
+    position: absolute;
+    margin-right: -250px;
+}
+#wrapper.hideside #sidebar-wrapper {
+    width: 0;
+}
+#wrapper.hideside {
+    padding-left: 0;
+}
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 10px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+.logout{
+    padding-right: 20px;
+}
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.hideside {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.hideside #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding-top: 60px;
+        position: relative;
+    }
+
+    #wrapper.hideside #page-content-wrapper{
+        position: relative;
+        margin-right: 0;
+    }
+    #nav-wrapper .navbar-fixed-top{
+        left:250px;
+    }
+    #wrapper.hideside #nav-wrapper .navbar-fixed-top{
+        left:0;
+    }
+
+    #footer-wrapper {
+        left:250px;
+    }
+    #wrapper.hideside #footer-wrapper {
+        left:0;
+    }
+}
+.center {
+    margin: auto;
+    width: 90%;
+    padding: 15px;
+}
+.profile-image {
+    width: 30px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+.profile-element li a {
+    color: #3d485f;
+}
+.profile-element li a:hover {
+    text-decoration: none;
+    color: #3d485f;
+    background: rgba(157, 157, 157, 0.2);
+}
+
+.profile-element li a:active,
+.profile-element li a:focus {
+    /* text-decoration: none; */
+    color: #ccc8bc;
+}

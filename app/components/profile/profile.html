@@ -1,0 +1,18 @@
+<div class="btn-group profile-element" uib-dropdown is-open="status.isopen">
+    <img ng-show="account.imgSrc" class="img-circle" src="{{account.imgSrc}}"/>
+    <img ng-hide="account.imgSrc" class="img-circle" src="img/no_pic.jpg"/>
+    <a uib-dropdown-toggle ng-disabled="disabled">
+        {{account.firstName}} {{account.lastName}}<span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button">
+        <li><a ui-sref="index.settings"><span class="glyphicon glyphicon-wrench"></span>
+            &nbsp;Profile Settings</a></li>
+        <li><a ui-sref="index.password"><span class="glyphicon glyphicon-lock"></span>
+            &nbsp;Change Password</a></li>
+        <li><a ui-sref="index.sessions"><span class="glyphicon glyphicon-cloud"></span>
+            &nbsp;Active Sessions</a></li>
+        <li class="divider"></li>
+        <li><a ui-sref="logout"><span class="glyphicon glyphicon-log-out"></span>
+            &nbsp;Log out</a></li>
+    </ul>
+</div>

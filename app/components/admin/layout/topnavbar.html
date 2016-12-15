@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default navbar-fixed-top {{classes}}" role="navigation">
+    <div class="navbar-header">
+        <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ui-sref="home" translate="global.title">BluntSoftware</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+
+        <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+                <input  class="form-control" type="text"/>
+            </div>
+            <button class="btn btn-default" type="submit">
+                Search
+            </button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li ui-sref-active="active">
+                <a ui-sref="index.dashboard"><span class="nav-label">Home</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="laceteditor"><span class="nav-label">Editor</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="admin.docs.intro"><span class="nav-label">Docs</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="admin.users"><span class="nav-label">Users</span> </a>
+            </li>
+
+
+            <li class="logout">
+                <a ui-sref="logout">
+                    <i class="fa fa-sign-out"></i> Log out
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

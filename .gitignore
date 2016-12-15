@@ -1,0 +1,11 @@
+target
+target.bak
+.idea
+*.ipr
+*.iws
+*.iml
+.tmp
+app/bower_components
+node_modules
+src/main/webapp
+dist
