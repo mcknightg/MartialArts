@@ -24,24 +24,25 @@ import org.hibernate.annotations.Type;
 import org.hibernate.proxy.HibernateProxy;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.annotation.*;
-                    
+                        
 @Entity
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-@Table(name = "\"school\"")
-public class School implements CustomDomain<School> {
+@Table(name = "\"attendance\"")
+public class Attendance implements CustomDomain<Attendance> {
 
     private static final Map< Serializable, Integer > SAVED_HASHES = Collections.synchronizedMap(new WeakHashMap< Serializable, Integer >());
     private volatile Integer hashCode;
     private Integer id = null;
-    private String name;
-    private Address address;
+    private String date;
+    private Karateclass karateclass;
+    private Student student;
     private String owner;
 
-    public School() { }
+    public Attendance() { }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "school_id_seq")
-    @SequenceGenerator(name = "school_id_seq", allocationSize = 1, sequenceName = "school_id_seq", initialValue = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "attendance_id_seq")
+    @SequenceGenerator(name = "attendance_id_seq", allocationSize = 1, sequenceName = "attendance_id_seq", initialValue = 1)
     @Column(name = "\"id\"")
     public Integer getId() {
         return id;
@@ -53,22 +54,32 @@ public class School implements CustomDomain<School> {
         this.id = id;
     }
 
-    @Column(name = "\"name\"", length = 255)
-    public String getName() {
-        return name;
+    @Column(name = "\"date\"", length = 255)
+    public String getDate() {
+        return date;
     }
-    public void setName(String name){
-        this.name = name;
+    public void setDate(String date){
+        this.date = date;
     }
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "\"address\"", nullable = true )
-    public Address getAddress() {
-        return address;
+    @JoinColumn(name = "\"karateclass\"", nullable = true )
+    public Karateclass getKarateclass() {
+        return karateclass;
     }
-    public void setAddress(Address address){
-        this.address = address;
+    public void setKarateclass(Karateclass karateclass){
+        this.karateclass = karateclass;
+    }
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
+    @JoinColumn(name = "\"student\"", nullable = true )
+    public Student getStudent() {
+        return student;
+    }
+    public void setStudent(Student student){
+        this.student = student;
     }
 
     @Column(name = "\"owner\"", length = 255)
@@ -81,7 +92,7 @@ public class School implements CustomDomain<School> {
 
     @Transient
     public Class<?> getClassType() {
-        return School.class;
+        return Attendance.class;
     }
 
     @Override
@@ -105,13 +116,13 @@ public class School implements CustomDomain<School> {
         return hashCode;
     }
 
-    public int compareTo(School school) {
+    public int compareTo(Attendance attendance) {
         return 0;
     }
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        School entity = (School)super.clone();
+        Attendance entity = (Attendance)super.clone();
         entity.setId(null);
         return entity;
     }

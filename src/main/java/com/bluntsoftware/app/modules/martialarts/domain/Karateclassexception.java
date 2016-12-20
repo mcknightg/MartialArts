@@ -27,21 +27,21 @@ import com.fasterxml.jackson.annotation.*;
                     
 @Entity
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-@Table(name = "\"school\"")
-public class School implements CustomDomain<School> {
+@Table(name = "\"karateclassexception\"")
+public class Karateclassexception implements CustomDomain<Karateclassexception> {
 
     private static final Map< Serializable, Integer > SAVED_HASHES = Collections.synchronizedMap(new WeakHashMap< Serializable, Integer >());
     private volatile Integer hashCode;
     private Integer id = null;
-    private String name;
-    private Address address;
+    private String date;
+    private String description;
     private String owner;
 
-    public School() { }
+    public Karateclassexception() { }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "school_id_seq")
-    @SequenceGenerator(name = "school_id_seq", allocationSize = 1, sequenceName = "school_id_seq", initialValue = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "karateclassexception_id_seq")
+    @SequenceGenerator(name = "karateclassexception_id_seq", allocationSize = 1, sequenceName = "karateclassexception_id_seq", initialValue = 1)
     @Column(name = "\"id\"")
     public Integer getId() {
         return id;
@@ -53,22 +53,20 @@ public class School implements CustomDomain<School> {
         this.id = id;
     }
 
-    @Column(name = "\"name\"", length = 255)
-    public String getName() {
-        return name;
+    @Column(name = "\"date\"", length = 255)
+    public String getDate() {
+        return date;
     }
-    public void setName(String name){
-        this.name = name;
+    public void setDate(String date){
+        this.date = date;
     }
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "\"address\"", nullable = true )
-    public Address getAddress() {
-        return address;
+    @Column(name = "\"description\"", length = 255)
+    public String getDescription() {
+        return description;
     }
-    public void setAddress(Address address){
-        this.address = address;
+    public void setDescription(String description){
+        this.description = description;
     }
 
     @Column(name = "\"owner\"", length = 255)
@@ -81,7 +79,7 @@ public class School implements CustomDomain<School> {
 
     @Transient
     public Class<?> getClassType() {
-        return School.class;
+        return Karateclassexception.class;
     }
 
     @Override
@@ -105,13 +103,13 @@ public class School implements CustomDomain<School> {
         return hashCode;
     }
 
-    public int compareTo(School school) {
+    public int compareTo(Karateclassexception karateclassexception) {
         return 0;
     }
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        School entity = (School)super.clone();
+        Karateclassexception entity = (Karateclassexception)super.clone();
         entity.setId(null);
         return entity;
     }

@@ -24,7 +24,7 @@ import org.hibernate.annotations.Type;
 import org.hibernate.proxy.HibernateProxy;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.annotation.*;
-                
+                    
 @Entity
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @Table(name = "\"karateclass\"")
@@ -35,6 +35,7 @@ public class Karateclass implements CustomDomain<Karateclass> {
     private Integer id = null;
     private School school;
     private String weekDay;
+    private String owner;
 
     public Karateclass() { }
 
@@ -68,6 +69,14 @@ public class Karateclass implements CustomDomain<Karateclass> {
     }
     public void setWeekDay(String weekDay){
         this.weekDay = weekDay;
+    }
+
+    @Column(name = "\"owner\"", length = 255)
+    public String getOwner() {
+        return owner;
+    }
+    public void setOwner(String owner){
+        this.owner = owner;
     }
 
     @Transient

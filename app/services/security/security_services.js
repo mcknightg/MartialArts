@@ -9,6 +9,14 @@ catwalkApp.constant('USER_ROLES', {
 var user_manager_base_url  = base_url + 'user_manager/';
 
 /* Services */
+
+catwalkApp.factory('Properties', ['$resource',
+    function ($resource) {
+        return $resource(base_url + 'properties', {}, {
+            'get': { method: 'GET', params: {}, isArray: false}
+        });
+    }]);
+
 catwalkApp.factory('Account', ['$resource',
     function ($resource) {
         return $resource(user_manager_base_url + 'account', {}, {

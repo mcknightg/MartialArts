@@ -24,24 +24,25 @@ import org.hibernate.annotations.Type;
 import org.hibernate.proxy.HibernateProxy;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.annotation.*;
-                    
+                        
 @Entity
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-@Table(name = "\"school\"")
-public class School implements CustomDomain<School> {
+@Table(name = "\"tuition\"")
+public class Tuition implements CustomDomain<Tuition> {
 
     private static final Map< Serializable, Integer > SAVED_HASHES = Collections.synchronizedMap(new WeakHashMap< Serializable, Integer >());
     private volatile Integer hashCode;
     private Integer id = null;
-    private String name;
-    private Address address;
+    private Double amount;
+    private Student student;
+    private Boolean paid;
     private String owner;
 
-    public School() { }
+    public Tuition() { }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "school_id_seq")
-    @SequenceGenerator(name = "school_id_seq", allocationSize = 1, sequenceName = "school_id_seq", initialValue = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "tuition_id_seq")
+    @SequenceGenerator(name = "tuition_id_seq", allocationSize = 1, sequenceName = "tuition_id_seq", initialValue = 1)
     @Column(name = "\"id\"")
     public Integer getId() {
         return id;
@@ -53,22 +54,31 @@ public class School implements CustomDomain<School> {
         this.id = id;
     }
 
-    @Column(name = "\"name\"", length = 255)
-    public String getName() {
-        return name;
+    @Column(name = "\"amount\"")
+    public Double getAmount() {
+        return amount;
     }
-    public void setName(String name){
-        this.name = name;
+    public void setAmount(Double amount){
+        this.amount = amount;
     }
 
     @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "\"address\"", nullable = true )
-    public Address getAddress() {
-        return address;
+    @JoinColumn(name = "\"student\"", nullable = true )
+    public Student getStudent() {
+        return student;
     }
-    public void setAddress(Address address){
-        this.address = address;
+    public void setStudent(Student student){
+        this.student = student;
+    }
+
+    @JsonSerialize(using = com.bluntsoftware.lib.jpa.serializers.CustomBooleanSerializer.class, include=JsonSerialize.Inclusion.NON_NULL)
+    @Column(name = "\"paid\"")
+    public Boolean getPaid() {
+        return paid;
+    }
+    public void setPaid(Boolean paid){
+        this.paid = paid;
     }
 
     @Column(name = "\"owner\"", length = 255)
@@ -81,7 +91,7 @@ public class School implements CustomDomain<School> {
 
     @Transient
     public Class<?> getClassType() {
-        return School.class;
+        return Tuition.class;
     }
 
     @Override
@@ -105,13 +115,13 @@ public class School implements CustomDomain<School> {
         return hashCode;
     }
 
-    public int compareTo(School school) {
+    public int compareTo(Tuition tuition) {
         return 0;
     }
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        School entity = (School)super.clone();
+        Tuition entity = (Tuition)super.clone();
         entity.setId(null);
         return entity;
     }

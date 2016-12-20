@@ -1,0 +1,106 @@
+
+<form name="form" role="form" novalidate  class="form-horizontal ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength" ng-submit="create()">
+
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="modal-title">Property Settings (change requires restart)</h1>
+
+        </div>
+        <div style="padding-top: 15px"class="col-md-6">
+            <button ng-disabled="form.$invalid" class="pull-right btn btn-primary" ng-click="save()">
+                <span class="glyphicon glyphicon-save"></span> Save
+            </button>
+            <button type="button" class="pull-right btn btn-default" data-dismiss="modal" ng-click="back()">
+                <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+            </button>
+        </div>
+    </div>
+
+    <!-- <div ng-repeat="(key, value) in props" class="form-group">
+        <label>{{key}}</label>
+    </div> -->
+
+    <div class="modal-body row">
+        <div class="col-lg-4">
+            <div class="panel panel-primary ">
+                <div class="panel-heading">Mail</div>
+                <div class="panel-body">
+                    <label>User</label>
+                    <input type="text" class="form-control" ng-model="props['spring.mail.user']" name="spring.mail.user"  >
+
+                    <label>Password</label>
+                    <input type="text" class="form-control" ng-model="props['spring.mail.password']" name="spring.mail.password"  >
+
+                    <label>From</label>
+                    <input type="text" class="form-control" ng-model="props['spring.mail.from']" name="spring.mail.from"  >
+
+                    <label>Host</label>
+                    <input type="text" class="form-control" ng-model="props['spring.mail.host']" name="spring.mail.host"  >
+
+                    <label>Port</label>
+                    <input type="text" class="form-control" ng-model="props['spring.mail.port']" name="spring.mail.port"  >
+
+                    <!--
+                        <label>Protocol</label>
+                        <input type="text" class="form-control" ng-model="props['spring.mail.protocol']" name="spring.mail.protocol"  >
+
+                        <label>Auth</label>
+                        <input type="text" class="form-control" ng-model="props['spring.mail.auth']" name="spring.mail.auth"  >
+
+                        <label>Tls</label>
+                        <input type="text" class="form-control" ng-model="props['spring.mail.tls']" name="spring.mail.tls"  >
+                   -->
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4">
+            <div class="panel panel-primary ">
+                <div class="panel-heading">Brain Tree</div>
+                <div class="panel-body">
+                    <label>Merchant ID</label>
+                    <input type="text" class="form-control" ng-model="props['braintree.merchant.id']" name="braintree.merchant.id"  >
+
+                    <label>Private Key</label>
+                    <input type="text" class="form-control" ng-model="props['braintree.private.key']" name="braintree.private.key"  >
+
+                    <label>Public Key</label>
+                    <input type="text" class="form-control" ng-model="props['braintree.public.key']" name="braintree.public.key"  >
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="panel panel-primary ">
+            <div class="panel-heading">Social</div>
+                <div class="panel-body">
+                    <label>Google Key</label>
+                    <input type="text" class="form-control" ng-model="props['google.consumerKey']" name="google.consumerKey"  >
+                    <label>Google Secret</label>
+                    <input type="text" class="form-control" ng-model="props['google.consumerSecret']" name="google.consumerSecret"  >
+
+                    <label>Facebook Key</label>
+                    <input type="text" class="form-control" ng-model="props['facebook.app.id']" name="facebook.app.id"  >
+                    <label>Facebook Secret</label>
+                    <input type="text" class="form-control" ng-model="props['facebook.app.secret']" name="facebook.app.secret"  >
+
+                    <label>Linkedin Key</label>
+                    <input type="text" class="form-control" ng-model="props['linkedin.app.id']" name="linkedin.app.id"  >
+                    <label>Linkedin Secret</label>
+                    <input type="text" class="form-control" ng-model="props['linkedin.app.secret']" name="linkedin.app.secret"  >
+
+                    <label>Twitter Key</label>
+                    <input type="text" class="form-control" ng-model="props['twitter.consumer.key']" name="twitter.consumer.key"  >
+                    <label>Twitter Secret</label>
+                    <input type="text" class="form-control" ng-model="props['twitter.consumer.secret']" name="twitter.consumer.secret"  >
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</form>

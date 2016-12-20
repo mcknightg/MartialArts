@@ -24,7 +24,7 @@ import org.hibernate.annotations.Type;
 import org.hibernate.proxy.HibernateProxy;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.annotation.*;
-                        
+                                
 @Entity
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 @Table(name = "\"student\"")
@@ -37,6 +37,8 @@ public class Student implements CustomDomain<Student> {
     private String lastName;
     private School school;
     private String rank;
+    private Address address;
+    private String owner;
 
     public Student() { }
 
@@ -86,6 +88,24 @@ public class Student implements CustomDomain<Student> {
     }
     public void setRank(String rank){
         this.rank = rank;
+    }
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
+    @JoinColumn(name = "\"address\"", nullable = true )
+    public Address getAddress() {
+        return address;
+    }
+    public void setAddress(Address address){
+        this.address = address;
+    }
+
+    @Column(name = "\"owner\"", length = 255)
+    public String getOwner() {
+        return owner;
+    }
+    public void setOwner(String owner){
+        this.owner = owner;
     }
 
     @Transient

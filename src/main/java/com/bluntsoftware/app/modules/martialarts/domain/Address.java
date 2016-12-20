@@ -24,24 +24,27 @@ import org.hibernate.annotations.Type;
 import org.hibernate.proxy.HibernateProxy;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.annotation.*;
-                    
+                                
 @Entity
 @JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
-@Table(name = "\"school\"")
-public class School implements CustomDomain<School> {
+@Table(name = "\"address\"")
+public class Address implements CustomDomain<Address> {
 
     private static final Map< Serializable, Integer > SAVED_HASHES = Collections.synchronizedMap(new WeakHashMap< Serializable, Integer >());
     private volatile Integer hashCode;
     private Integer id = null;
-    private String name;
-    private Address address;
+    private String streetaddress;
+    private String city;
+    private String state;
+    private String zipcode;
+    private String phoneno;
     private String owner;
 
-    public School() { }
+    public Address() { }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "school_id_seq")
-    @SequenceGenerator(name = "school_id_seq", allocationSize = 1, sequenceName = "school_id_seq", initialValue = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "address_id_seq")
+    @SequenceGenerator(name = "address_id_seq", allocationSize = 1, sequenceName = "address_id_seq", initialValue = 1)
     @Column(name = "\"id\"")
     public Integer getId() {
         return id;
@@ -53,22 +56,44 @@ public class School implements CustomDomain<School> {
         this.id = id;
     }
 
-    @Column(name = "\"name\"", length = 255)
-    public String getName() {
-        return name;
+    @Column(name = "\"streetaddress\"", length = 255)
+    public String getStreetaddress() {
+        return streetaddress;
     }
-    public void setName(String name){
-        this.name = name;
+    public void setStreetaddress(String streetaddress){
+        this.streetaddress = streetaddress;
     }
 
-    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @org.hibernate.annotations.Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
-    @JoinColumn(name = "\"address\"", nullable = true )
-    public Address getAddress() {
-        return address;
+    @Column(name = "\"city\"", length = 255)
+    public String getCity() {
+        return city;
     }
-    public void setAddress(Address address){
-        this.address = address;
+    public void setCity(String city){
+        this.city = city;
+    }
+
+    @Column(name = "\"state\"", length = 255)
+    public String getState() {
+        return state;
+    }
+    public void setState(String state){
+        this.state = state;
+    }
+
+    @Column(name = "\"zipcode\"", length = 255)
+    public String getZipcode() {
+        return zipcode;
+    }
+    public void setZipcode(String zipcode){
+        this.zipcode = zipcode;
+    }
+
+    @Column(name = "\"phoneno\"", length = 255)
+    public String getPhoneno() {
+        return phoneno;
+    }
+    public void setPhoneno(String phoneno){
+        this.phoneno = phoneno;
     }
 
     @Column(name = "\"owner\"", length = 255)
@@ -81,7 +106,7 @@ public class School implements CustomDomain<School> {
 
     @Transient
     public Class<?> getClassType() {
-        return School.class;
+        return Address.class;
     }
 
     @Override
@@ -105,13 +130,13 @@ public class School implements CustomDomain<School> {
         return hashCode;
     }
 
-    public int compareTo(School school) {
+    public int compareTo(Address address) {
         return 0;
     }
 
     @Override
     public Object clone() throws CloneNotSupportedException {
-        School entity = (School)super.clone();
+        Address entity = (Address)super.clone();
         entity.setId(null);
         return entity;
     }

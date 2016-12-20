@@ -1,0 +1,48 @@
+
+
+<!-- id streetaddress city state zipcode phoneno owner  -->
+
+<form name="form" role="form" novalidate  class="ng-scope ng-invalid ng-invalid-required ng-dirty ng-valid-minlength" ng-submit="create()">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="back()">&times;</button>
+        <h4 class="modal-title" id="myDeviceLabel">Create or edit a Address</h4>
+    </div>
+    <div class="modal-body">
+            <div class="form-group">
+                <label>ID</label>
+                <input type="text" class="form-control" name="id"  ng-model="modelData.id" readonly>
+            </div>
+            <div class="form-group">
+                <label>streetaddress</label>
+                <input type="text" class="form-control" name="streetaddress" ng-model="modelData.streetaddress" ng-minlength=1 ng-maxlength=255  >
+            </div>
+            <div class="form-group">
+                <label>city</label>
+                <input type="text" class="form-control" name="city" ng-model="modelData.city" ng-minlength=1 ng-maxlength=255  >
+            </div>
+            <div class="form-group">
+                <label>state</label>
+                <input type="text" class="form-control" name="state" ng-model="modelData.state" ng-minlength=1 ng-maxlength=255  >
+            </div>
+            <div class="form-group">
+                <label>zipcode</label>
+                <input type="text" class="form-control" name="zipcode" ng-model="modelData.zipcode" ng-minlength=1 ng-maxlength=255  >
+            </div>
+            <div class="form-group">
+                <label>phoneno</label>
+                <input type="text" class="form-control" name="phoneno" ng-model="modelData.phoneno" ng-minlength=1 ng-maxlength=255  >
+            </div>
+            <div class="form-group">
+                <label>owner</label>
+                <input type="text" class="form-control" name="owner" ng-model="modelData.owner" ng-minlength=1 ng-maxlength=255  >
+            </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="back()">
+            <span class="glyphicon glyphicon-ban-circle"></span> Cancel
+        </button>
+        <button ng-disabled="form.$invalid" class="btn btn-primary" ng-click="save()">
+            <span class="glyphicon glyphicon-save"></span> Save
+        </button>
+    </div>
+</form>

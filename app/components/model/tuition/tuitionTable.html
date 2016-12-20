@@ -1,0 +1,31 @@
+<div class="row">
+
+    <div class="col-lg-6 col-md-4 col-sm-12">
+        <div class="row panel" ng-click="get(item.id)"  id="{{item.id}}" ng-repeat="item in modelList.rows">
+            <div class="col-lg-4">{{item.id}}</div>
+            <div class="col-lg-4">{{item.paid}}</div>
+            <div class="col-lg-4">{{item.owner}}</div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-8 col-sm-0">
+        <div class="row">
+    <div class="col-lg-12">id : {{modelData.id}}</div>
+        </div>
+        <div class="row">
+    <div class="col-lg-12">amount :
+        <ng-Prism class='language-javascript'>{{modelData.amount | json}}</ng-Prism>
+    </div>
+        </div>
+        <div class="row">
+    <div class="col-lg-12">student :
+        <ng-Prism class='language-javascript'>{{modelData.student | json}}</ng-Prism>
+    </div>
+        </div>
+        <div class="row">
+    <div class="col-lg-12">paid : {{modelData.paid}}</div>
+        </div>
+        <div class="row">
+    <div class="col-lg-12">owner : {{modelData.owner}}</div>
+        </div>
+    </div>
+</div>

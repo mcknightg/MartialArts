@@ -2,6 +2,10 @@ catwalkApp.service('$global.services', [
     'MartialartsSchool',
     'MartialartsStudent',
     'MartialartsKarateclass',
+    'MartialartsAttendance',
+    'MartialartsTuition',
+    'MartialartsAddress',
+    'MartialartsKarateclassexception',
     'UserManagerApplicationAuthority',
     'UserManagerApplicationPersistentToken',
     'UserManagerApplicationUser',
@@ -13,6 +17,10 @@ function(
     MartialartsSchool,
     MartialartsStudent,
     MartialartsKarateclass,
+    MartialartsAttendance,
+    MartialartsTuition,
+    MartialartsAddress,
+    MartialartsKarateclassexception,
     UserManagerApplicationAuthority,
     UserManagerApplicationPersistentToken,
     UserManagerApplicationUser,
@@ -24,6 +32,10 @@ function(
             this.MartialartsSchool = MartialartsSchool;
             this.MartialartsStudent = MartialartsStudent;
             this.MartialartsKarateclass = MartialartsKarateclass;
+            this.MartialartsAttendance = MartialartsAttendance;
+            this.MartialartsTuition = MartialartsTuition;
+            this.MartialartsAddress = MartialartsAddress;
+            this.MartialartsKarateclassexception = MartialartsKarateclassexception;
             this.UserManagerApplicationAuthority = UserManagerApplicationAuthority;
             this.UserManagerApplicationPersistentToken = UserManagerApplicationPersistentToken;
             this.UserManagerApplicationUser = UserManagerApplicationUser;
